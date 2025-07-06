@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sair Karo's Refund Policy explains our procedures for cancellations, refunds, and eligibility for travel bookings.">
+    <title>Refund Policy - Sair Karo</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrpSgXJ6L/B6g0s2sU6N5uO/nC7Z1j4K4yI0+I/r9wz9L/Q1P/6r/j+8Xw0Q2f5uM3o2p/y9q2yq3t/8A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Universal Box-sizing */
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+
+        :root {
+            /* Red-themed color palette (consistent with Home & Privacy Policy) */
+            --primary-red: #dc2626; /* Corresponds to Tailwind red-600 */
+            --secondary-red: #ef4444; /* Corresponds to Tailwind red-500 */
+            --light-red: #fef2f2; /* Corresponds to Tailwind red-50, for backgrounds */
+            --lighter-red: #fee2e2; /* Corresponds to Tailwind red-100, for hover states */
+            --dark-red: #b91c1c; /* Corresponds to Tailwind red-700, for darker text/headers */
+            --mid-red: #fca5a5; /* Corresponds to Tailwind red-300, for borders */
+            --gray-text: #4b5563; /* Tailwind gray-700 */
+            --light-gray: #f8fafc; /* Tailwind gray-50 */
+            --border-color: #e2e8f0; /* Tailwind slate-200 */
+            --highlight-yellow: #fcd34d; /* Tailwind yellow-300 */
+        }
+
+        /* Base Body Styles */
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.7;
+            margin: 0;
+            padding: 0;
+            background-color: var(--light-gray);
+            color: var(--gray-text);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Skip to Content Link for Accessibility */
+        .skip-to-content-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--primary-red);
+            color: white;
+            padding: 8px;
+            z-index: 1000;
+            transition: top 0.3s ease-in-out;
+        }
+        .skip-to-content-link:focus {
+            top: 0;
+        }
+
+        /* Header & Footer Styles */
+        header {
+            background-color: var(--primary-red);
+            color: white;
+            padding: 1.5rem 0;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+        }
+        header .container {
+            max-width: 80rem; /* Tailwind max-w-7xl */
+            margin: 0 auto;
+            padding-left: 1rem; /* Tailwind px-4 */
+            padding-right: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header .logo a {
+            color: white;
+            font-size: 1.875rem; /* Tailwind text-3xl */
+            font-weight: 700; /* Tailwind font-bold */
+            letter-spacing: -0.025em; /* Tailwind tracking-tight */
+            padding: 0.25rem 0.5rem; /* Tailwind px-2 py-1 */
+            border-radius: 0.5rem; /* Tailwind rounded-lg */
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+        }
+        header .logo a:hover {
+            background-color: var(--dark-red);
+        }
+        header nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 2rem; /* Tailwind space-x-8 */
+        }
+        header nav ul li a {
+            color: white;
+            font-size: 1.125rem; /* Tailwind text-lg */
+            border-radius: 0.5rem; /* Tailwind rounded-lg */
+            padding: 0.5rem 0.75rem; /* Tailwind px-3 py-2 */
+            transition: color 0.3s ease, background-color 0.3s ease;
+            text-decoration: none;
+        }
+        header nav ul li a:hover {
+            color: var(--lighter-red);
+            background-color: transparent;
+        }
+        header nav ul li a[aria-current="page"] {
+            background-color: var(--dark-red);
+            font-weight: 600;
+        }
+        header nav ul li a[aria-current="page"]:hover {
+            background-color: var(--primary-red);
+        }
+
+        footer {
+            background-color: #1f2937; /* Tailwind gray-800 */
+            color: white;
+            padding: 2rem 0;
+            margin-top: auto;
+        }
+        footer .footer-content {
+            text-align: center;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            max-width: 80rem;
+            margin: 0 auto;
+        }
+        footer nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0 0 0;
+            gap: 1rem;
+        }
+        footer nav ul li a {
+            color: #9ca3af; /* Tailwind gray-400 */
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        footer nav ul li a:hover {
+            color: white;
+        }
+        footer .social-links {
+            margin-top: 1.5rem;
+            font-size: 1.5rem;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+        footer .social-links a {
+            color: white;
+            transition: color 0.3s ease;
+        }
+        footer .social-links a:hover {
+            color: var(--secondary-red);
+        }
+
+        /* Main Policy Wrapper */
+        .policy-wrapper {
+            display: flex;
+            flex-grow: 1;
+            max-width: 80rem;
+            margin: 1.5rem auto;
+            background-color: white;
+            border-radius: 0.5rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            flex-direction: column;
+        }
+        @media (min-width: 1024px) {
+            .policy-wrapper {
+                flex-direction: row;
+            }
+        }
+
+        /* Sidebar Navigation */
+        .sidebar {
+            width: 100%;
+            flex-shrink: 0;
+            background-color: var(--light-red);
+            padding: 1.5rem 2rem;
+            border-bottom: 1px solid var(--mid-red);
+            position: sticky;
+            top: 0;
+            align-self: flex-start;
+            height: auto;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+        }
+        @media (min-width: 1024px) {
+            .sidebar {
+                width: 18rem;
+                border-bottom: 0;
+                border-right: 1px solid var(--mid-red);
+                height: calc(100vh - 4rem); /* Adjust height for sticky behavior */
+            }
+        }
+
+        .sidebar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.25rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--primary-red);
+        }
+        @media (min-width: 1024px) {
+            .sidebar-header {
+                border-bottom: 0;
+                margin-bottom: 0;
+                padding-bottom: 0;
+            }
+        }
+
+        .sidebar h2 {
+            color: var(--dark-red);
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0;
+            line-height: 1.2;
+        }
+
+        .sidebar-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.875rem;
+            cursor: pointer;
+            color: var(--primary-red);
+            padding: 0.25rem;
+            border-radius: 0.375rem;
+            transition: background-color 0.2s ease;
+        }
+        .sidebar-toggle:hover {
+            background-color: var(--lighter-red);
+        }
+
+        .sidebar-toggle .fa-times {
+            display: none;
+        }
+        .sidebar-toggle.active .fa-bars {
+            display: none;
+        }
+        .sidebar-toggle.active .fa-times {
+            display: inline-block;
+        }
+
+        .sidebar nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out;
+        }
+
+        .sidebar nav ul.open {
+            max-height: fit-content;
+            border-top: 1px solid var(--lighter-red);
+            padding-top: 1rem;
+            margin-top: 1rem;
+        }
+        @media (min-width: 1024px) {
+            .sidebar nav ul {
+                max-height: initial !important;
+                padding-top: 0 !important;
+                margin-top: 0 !important;
+                border-top: 0 !important;
+            }
+        }
+
+        .sidebar nav ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .sidebar nav ul li a {
+            text-decoration: none;
+            color: var(--gray-text);
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            padding: 0.75rem;
+            border-radius: 0.375rem;
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            font-size: 1rem;
+        }
+
+        .sidebar nav ul li a:hover,
+        .sidebar nav ul li a.active {
+            background-color: var(--primary-red);
+            color: white;
+            transform: translateX(4px);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        .sidebar-icon {
+            margin-right: 0.75rem;
+            font-size: 1.125rem;
+            color: var(--secondary-red);
+            transition: color 0.3s ease;
+        }
+
+        .sidebar nav ul li a.active .sidebar-icon,
+        .sidebar nav ul li a:hover .sidebar-icon {
+            color: white;
+        }
+
+        /* Main Content Area */
+        .content {
+            flex: 1;
+            padding: 1.5rem 2rem;
+            position: relative;
+        }
+
+        .policy-heading {
+            color: var(--dark-red);
+            font-size: 2.25rem;
+            font-weight: 800;
+            margin-top: 0;
+            margin-bottom: 0.75rem;
+            padding-bottom: 1rem;
+            border-bottom: 4px solid var(--primary-red);
+            filter: drop-shadow(0 1px 1px rgba(0,0,0,0.05));
+        }
+        @media (min-width: 768px) {
+            .policy-heading {
+                font-size: 2.25rem;
+            }
+        }
+        @media (min-width: 1024px) {
+            .policy-heading {
+                font-size: 3rem;
+            }
+        }
+
+        .last-updated {
+            font-style: italic;
+            color: var(--gray-text);
+            margin-bottom: 1.5rem;
+            font-size: 0.875rem;
+        }
+        @media (min-width: 768px) {
+            .last-updated {
+                font-size: 1rem;
+            }
+        }
+
+        /* Search Bar */
+        .search-box {
+            position: relative;
+            margin-bottom: 2rem;
+        }
+
+        .search-box input[type="text"] {
+            width: 100%;
+            padding: 0.75rem 1rem 0.75rem 3rem;
+            border: 1px solid var(--border-color);
+            border-radius: 9999px;
+            font-size: 1rem;
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            transition: all 0.2s ease;
+            color: var(--gray-text);
+        }
+
+        .search-box input[type="text"]::placeholder {
+            color: #6b7280;
+        }
+
+        .search-box input[type="text"]:focus {
+            outline: none;
+            border-color: var(--secondary-red);
+            box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.3);
+        }
+
+        .search-box .search-icon {
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #6b7280;
+            font-size: 1.125rem;
+        }
+
+        /* Policy Sections */
+        .policy-section {
+            margin-bottom: 2.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px dashed #d1d5db;
+        }
+
+        .policy-section:last-child {
+            border-bottom: none;
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            color: var(--dark-red);
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1.25rem;
+            position: relative;
+            padding-left: 2.25rem;
+            line-height: 1.375;
+        }
+        @media (min-width: 768px) {
+            .section-title {
+                font-size: 1.875rem;
+            }
+        }
+
+        .section-icon {
+            position: absolute;
+            left: 0;
+            top: 0.25rem;
+            color: var(--primary-red);
+            font-size: 1.25rem;
+        }
+
+        .section-content {
+            font-size: 1rem;
+            color: var(--gray-text);
+            line-height: 1.625;
+        }
+        .section-content h3 {
+            color: var(--primary-red);
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+        @media (min-width: 768px) {
+            .section-content h3 {
+                font-size: 1.5rem;
+            }
+        }
+
+        .section-content ul {
+            list-style: disc;
+            margin-left: 1.5rem;
+            padding: 0;
+            line-height: 1.75rem;
+        }
+        @media (min-width: 768px) {
+            .section-content ul {
+                margin-left: 2rem;
+            }
+        }
+        .section-content ul li {
+            margin-bottom: 0.5rem;
+        }
+        .section-content strong {
+            color: var(--dark-red);
+        }
+        .section-content a {
+            color: var(--primary-red);
+            text-decoration: none;
+            transition: text-decoration 0.2s ease;
+        }
+        .section-content a:hover {
+            text-decoration: underline;
+        }
+
+        /* Highlighted search results */
+        .highlight {
+            background-color: var(--highlight-yellow);
+            padding: 0 0.125rem;
+            border-radius: 0.125rem;
+            font-weight: 600;
+            color: #1f2937;
+        }
+
+        /* Call to action */
+        .call-to-action {
+            background-color: var(--lighter-red);
+            padding: 1.25rem;
+            border-radius: 0.5rem;
+            text-align: center;
+            margin-top: 2.5rem;
+            border: 1px solid var(--mid-red);
+        }
+        .call-to-action p {
+            margin: 0;
+            font-size: 1.125rem;
+            color: var(--dark-red);
+        }
+        .call-to-action a {
+            color: var(--primary-red);
+            font-weight: 700;
+            text-decoration: none;
+        }
+        .call-to-action a:hover {
+            text-decoration: underline;
+        }
+
+        /* Return to Top Button */
+        .return-to-top {
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .scroll-to-top {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.75rem 1.5rem;
+            background-color: var(--primary-red);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 9999px;
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            font-weight: 700;
+            font-size: 1.125rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        .scroll-to-top:hover {
+            background-color: var(--dark-red);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        .scroll-to-top i {
+            margin-right: 0.75rem;
+            font-size: 1.25rem;
+        }
+
+        /* --- Responsive Design Media Queries --- */
+
+        /* For screens smaller than 1024px (lg breakpoint and below) */
+        @media (max-width: 1023px) {
+            .policy-wrapper {
+                margin: 1rem;
+                border-radius: 0.5rem;
+                box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            }
+
+            .sidebar {
+                position: relative;
+                height: auto;
+                border-right: none;
+                border-bottom: 1px solid var(--border-color);
+                padding: 1.25rem;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+                overflow-y: hidden;
+            }
+
+            .sidebar-header {
+                border-bottom: none;
+                margin-bottom: 0;
+                padding-bottom: 0;
+            }
+
+            .sidebar h2 {
+                font-size: 1.4rem;
+            }
+
+            .sidebar-toggle {
+                display: block;
+            }
+
+            .sidebar nav ul {
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.4s ease-out;
+                border-top: 1px solid transparent; /* For smooth transition appearance */
+            }
+            .sidebar nav ul.open {
+                max-height: 25rem; /* Sufficient for typical mobile menus */
+                border-top: 1px solid var(--lighter-red);
+                padding-top: 1rem;
+                margin-top: 1rem;
+            }
+
+
+            .content {
+                padding: 1.5rem;
+            }
+
+            .policy-heading {
+                font-size: 2rem;
+            }
+
+            .section-title {
+                font-size: 1.75rem;
+                padding-left: 2rem;
+            }
+
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 1rem;
+            }
+            header .container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            header nav {
+                width: 100%;
+                margin-top: 0.5rem;
+            }
+            header nav ul {
+                flex-direction: column;
+                width: 100%;
+                margin-top: 0.5rem;
+                display: none; /* Hidden by default for mobile nav */
+            }
+            header nav ul.mobile-menu-open { /* Class toggled by JS */
+                display: flex;
+            }
+            header nav ul li {
+                margin: 0.25rem 0;
+                width: 100%;
+            }
+            header nav ul li a {
+                padding: 0.5rem 0.75rem;
+                background-color: rgba(255,255,255,0.1);
+                border-radius: 0.375rem;
+            }
+        }
+
+        /* For screens smaller than 768px (md breakpoint and below) */
+        @media (max-width: 767px) {
+            .policy-heading {
+                font-size: 1.8rem;
+                padding-bottom: 0.75rem;
+            }
+
+            .last-updated {
+                margin-bottom: 1.25rem;
+            }
+
+            .search-box input[type="text"] {
+                padding: 0.625rem 0.75rem 0.625rem 2.5rem;
+                font-size: 0.9rem;
+            }
+            .search-box .search-icon {
+                left: 0.75rem;
+                font-size: 1em;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+                padding-left: 1.75rem;
+            }
+
+            .section-icon {
+                font-size: 0.8rem;
+                top: 0.1875rem;
+            }
+
+            .section-content {
+                font-size: 0.95rem;
+            }
+
+            .return-to-top {
+                margin-top: 2rem;
+            }
+            .scroll-to-top {
+                padding: 0.625rem 1.25rem;
+                font-size: 0.9em;
+            }
+            .scroll-to-top i {
+                margin-right: 0.5rem;
+                font-size: 1.1em;
+            }
+        }
+
+        /* For very small screens / mobile portrait */
+        @media (max-width: 480px) {
+            .policy-wrapper {
+                margin: 0.5rem;
+                border-radius: 0.25rem;
+            }
+
+            .sidebar {
+                padding: 1rem;
+            }
+
+            .sidebar nav ul.open {
+                max-height: 25rem;
+            }
+
+            .content {
+                padding: 1rem;
+            }
+
+            .policy-heading {
+                font-size: 1.25rem;
+            }
+
+            .section-title {
+                font-size: 1rem;
+                padding-left: 1.5rem;
+            }
+            .section-icon {
+                font-size: 0.7rem;
+                top: 0.125rem;
+            }
+            .section-content ul {
+                margin-left: 1rem;
+            }
+
+            .call-to-action {
+                padding: 1rem;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+    </head>
+<body>
+
+    <header>
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-start md:items-center">
+            <div class="logo mb-4 md:mb-0">
+                <a href="home.php">Sair Karo</a>
+            </div>
+            <nav aria-label="Main Navigation">
+                <ul>
+                    <li><a href="home.php">Home</a></li>
+                    <li><a href="contact.php">Contact Us</a></li>
+                    <li><a href="privacy_policy.html">Privacy Policy</a></li>
+                    <li><a href="terms_conditions.html">Terms & Conditions</a></li>
+                    <li><a href="refund_policy.html" aria-current="page">Refund Policy</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <a href="#main-content" class="skip-to-content-link">Skip to main content</a>
+
+    <div class="policy-wrapper" role="document">
+        <aside class="sidebar" aria-label="Refund Policy Navigation" id="sidebar">
+            <div class="sidebar-header">
+                <h2>Sections</h2>
+                <button class="sidebar-toggle" id="sidebar-toggle" aria-expanded="false" aria-controls="sidebar-nav">
+                    <i class="fas fa-bars"></i>
+                    <i class="fas fa-times"></i>
+                    <span class="sr-only">Toggle navigation</span>
+                </button>
+            </div>
+            <nav id="sidebar-nav" aria-label="Refund Policy Sections">
+                <ul>
+                    <li>
+                        <a href="#introduction" class="sidebar-link">
+                            <i class="fas fa-file-invoice-dollar sidebar-icon" aria-hidden="true"></i> Introduction
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#cancellation-eligibility" class="sidebar-link">
+                            <i class="fas fa-calendar-times sidebar-icon" aria-hidden="true"></i> Cancellation & Eligibility
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#refund-process" class="sidebar-link">
+                            <i class="fas fa-money-check-alt sidebar-icon" aria-hidden="true"></i> Refund Process
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#refund-timelines" class="sidebar-link">
+                            <i class="fas fa-hourglass-half sidebar-icon" aria-hidden="true"></i> Refund Timelines
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#non-refundable-items" class="sidebar-link">
+                            <i class="fas fa-ban sidebar-icon" aria-hidden="true"></i> Non-Refundable Items
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#supplier-policies" class="sidebar-link">
+                            <i class="fas fa-hotel sidebar-icon" aria-hidden="true"></i> Supplier Policies
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#force-majeure" class="sidebar-link">
+                            <i class="fas fa-cloud-sun-rain sidebar-icon" aria-hidden="true"></i> Force Majeure
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#policy-changes" class="sidebar-link">
+                            <i class="fas fa-redo-alt sidebar-icon" aria-hidden="true"></i> Changes to Policy
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#contact-us" class="sidebar-link">
+                            <i class="fas fa-envelope sidebar-icon" aria-hidden="true"></i> Contact Us
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="content" id="main-content">
+            <h1 class="policy-heading">Refund Policy for Sair Karo</h1>
+            <p class="last-updated">Last updated: <time datetime="2025-06-23">June 23, 2025</time></p>
+
+            <div class="search-box">
+                <label for="policySearch" class="sr-only">Search Refund Policy</label>
+                <input type="text" id="policySearch" placeholder="Search refund policy..." aria-label="Search Refund Policy">
+                <i class="fas fa-search search-icon" aria-hidden="true"></i>
+            </div>
+
+            <div id="policyContent">
+                <section id="introduction" class="policy-section" aria-labelledby="introduction-title">
+                    <h2 class="section-title" id="introduction-title">
+                        <i class="fas fa-file-invoice-dollar section-icon" aria-hidden="true"></i> Introduction
+                    </h2>
+                    <div class="section-content">
+                        <p>This Refund Policy outlines the conditions under which Sair Karo processes refunds for bookings made through our platform. As an intermediary, Sair Karo's refund process is largely governed by the terms and conditions of our travel service providers (airlines, bus operators, hotels, etc.).</p>
+                        <p>By making a booking through Sair Karo, you agree to this Refund Policy and the specific cancellation and refund policies of the respective service provider.</p>
+                    </div>
+                </section>
+
+                <section id="cancellation-eligibility" class="policy-section" aria-labelledby="cancellation-eligibility-title">
+                    <h2 class="section-title" id="cancellation-eligibility-title">
+                        <i class="fas fa-calendar-times section-icon" aria-hidden="true"></i> Cancellation & Eligibility
+                    </h2>
+                    <div class="section-content">
+                        <p>Refund eligibility is primarily determined by the cancellation policy of the specific airline, bus operator, railway, or hotel you booked. Key points include:</p>
+                        <ul>
+                            <li><strong>Timing:</strong> Most service providers have strict deadlines for cancellations. Cancellations made after this deadline may not be eligible for a refund or may incur higher penalties.</li>
+                            <li><strong>Ticket Type:</strong> Certain ticket fares (e.g., promotional, non-refundable) may have little to no refund value, regardless of when cancelled.</li>
+                            <li><strong>Supplier Fees:</strong> Service providers may levy cancellation fees. These fees will be deducted from any eligible refund amount.</li>
+                            <li><strong>Sair Karo Service Fees:</strong> Any service fees charged by Sair Karo for facilitating the original booking are generally non-refundable.</li>
+                            <li><strong>How to Cancel:</strong> All cancellations must be initiated through the Sair Karo platform or by contacting our customer support directly. We cannot guarantee refunds for cancellations made directly with the service provider without prior notification to us.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="refund-process" class="policy-section" aria-labelledby="refund-process-title">
+                    <h2 class="section-title" id="refund-process-title">
+                        <i class="fas fa-money-check-alt section-icon" aria-hidden="true"></i> Refund Process
+                    </h2>
+                    <div class="section-content">
+                        <p>Once you initiate a cancellation through Sair Karo:</p>
+                        <ol>
+                            <li><strong>Request Submission:</strong> Your cancellation request is submitted to the respective service provider.</li>
+                            <li><strong>Provider Confirmation:</strong> The service provider reviews the request based on their policy and confirms the eligible refund amount (if any).</li>
+                            <li><strong>Sair Karo Processing:</strong> Upon receiving confirmation from the service provider, Sair Karo will process the refund to your original payment method.</li>
+                            <li><strong>Notification:</strong> You will be notified via email about the status of your refund, including the amount, once processed.</li>
+                        </ol>
+                        <p>Please note that the refund amount will be subject to any applicable cancellation fees from the service provider and Sair Karo's non-refundable service fees.</p>
+                    </div>
+                </section>
+
+                <section id="refund-timelines" class="policy-section" aria-labelledby="refund-timelines-title">
+                    <h2 class="section-title" id="refund-timelines-title">
+                        <i class="fas fa-hourglass-half section-icon" aria-hidden="true"></i> Refund Timelines
+                    </h2>
+                    <div class="section-content">
+                        <p>The time it takes for a refund to be credited back to your account can vary significantly. Factors influencing this include:</p>
+                        <ul>
+                            <li><strong>Service Provider Processing:</strong> Airlines and other providers may take several business days or even weeks to process a cancellation and release funds.</li>
+                            <li><strong>Bank Processing:</strong> Once Sair Karo processes the refund, your bank or payment processor may take an additional 3-10 business days to post the credit to your statement.</li>
+                        </ul>
+                        <p>Typically, refunds can take anywhere from **7 to 21 business days** to reflect in your account from the date of cancellation confirmation. In some cases, especially for international transactions or specific airlines, it might take longer. We appreciate your patience during this process.</p>
+                    </div>
+                </section>
+
+                <section id="non-refundable-items" class="policy-section" aria-labelledby="non-refundable-items-title">
+                    <h2 class="section-title" id="non-refundable-items-title">
+                        <i class="fas fa-ban section-icon" aria-hidden="true"></i> Non-Refundable Items
+                    </h2>
+                    <div class="section-content">
+                        <p>Please be aware that the following items are generally non-refundable:</p>
+                        <ul>
+                            <li>Sair Karo's own service fees charged at the time of booking.</li>
+                            <li>Any third-party convenience fees (e.g., payment gateway charges).</li>
+                            <li>Specific fare types or promotions explicitly stated as non-refundable by the service provider.</li>
+                            <li>Travel insurance premiums once purchased.</li>
+                            <li>Services that have already been utilized (e.g., partial travel completed).</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="supplier-policies" class="policy-section" aria-labelledby="supplier-policies-title">
+                    <h2 class="section-title" id="supplier-policies-title">
+                        <i class="fas fa-hotel section-icon" aria-hidden="true"></i> Supplier Policies
+                    </h2>
+                    <div class="section-content">
+                        <p>It is crucial to understand that each airline, bus company, railway, or hotel has its own specific cancellation and refund policies. We strongly advise you to read these policies carefully before making any booking. These policies are usually accessible during the booking process on our site or on the respective service provider's official website.</p>
+                        <p>Any disputes regarding the refund amount or eligibility ultimately lie with the terms set forth by the specific travel service provider.</p>
+                    </div>
+                </section>
+
+                <section id="force-majeure" class="policy-section" aria-labelledby="force-majeure-title">
+                    <h2 class="section-title" id="force-majeure-title">
+                        <i class="fas fa-cloud-sun-rain section-icon" aria-hidden="true"></i> Force Majeure
+                    </h2>
+                    <div class="section-content">
+                        <p>In cases of unforeseen circumstances beyond our control (e.g., natural disasters, acts of war, pandemics, government mandates, extreme weather events) that lead to cancellation or disruption of travel services, Sair Karo will adhere to the refund and compensation policies set forth by the respective travel service providers and applicable laws.</p>
+                        <p>While we will do our best to assist you in such situations, refunds for "force majeure" events are entirely at the discretion of the service provider and relevant government regulations.</p>
+                    </div>
+                </section>
+
+                <section id="policy-changes" class="policy-section" aria-labelledby="policy-changes-title">
+                    <h2 class="section-title" id="policy-changes-title">
+                        <i class="fas fa-redo-alt section-icon" aria-hidden="true"></i> Changes to This Refund Policy
+                    </h2>
+                    <div class="section-content">
+                        <p>Sair Karo reserves the right to modify this Refund Policy at any time. Any changes will be effective immediately upon posting the updated policy on this page, along with an updated "Last updated" date. We encourage you to review this policy periodically.</p>
+                    </div>
+                </section>
+
+                <section id="contact-us" class="policy-section" aria-labelledby="contact-us-title">
+                    <h2 class="section-title" id="contact-us-title">
+                        <i class="fas fa-envelope section-icon" aria-hidden="true"></i> Contact Us
+                    </h2>
+                    <div class="section-content">
+                        <p>If you have any questions or require assistance regarding a refund, please contact us:</p>
+                        <ul>
+                            <li>By email: <a href="mailto:ajay@gmail.com">ajay@gmail.com</a></li>
+                            <li>By visiting our contact page: <a href="contact.php">contact.php</a></li>
+                            <li>By mail: Sair Karo, 123 Globe Trotter Lane, Adventurville, CA 90210, USA</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+
+            <div class="call-to-action">
+                <p>Have more questions about your booking? <a href="contact.php">Contact our support team!</a></p>
+            </div>
+
+            <div class="return-to-top">
+                <a href="#top" class="scroll-to-top" aria-label="Return to top of page">
+                    <i class="fas fa-arrow-circle-up" aria-hidden="true"></i> Return to Top
+                </a>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Sair Karo. All rights reserved.</p>
+            <nav aria-label="Footer Navigation">
+                <ul>
+                    <li><a href="terms_conditions.html">Terms & Conditions</a></li>
+                    <li><a href="privacy_policy.html">Privacy Policy</a></li>
+                    <li><a href="refund_policy.html">Refund Policy</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </nav>
+            <div class="social-links">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const sidebarToggle = document.getElementById('sidebar-toggle');
+            const sidebarNav = document.getElementById('sidebar-nav');
+            const sidebarLinks = document.querySelectorAll('.sidebar-link');
+            const policySections = document.querySelectorAll('.policy-section');
+            const policySearchInput = document.getElementById('policySearch');
+            let originalContent = {}; // To store original HTML for search reset
+
+            // Store original content of each section for highlighting/reset
+            policySections.forEach(section => {
+                originalContent[section.id] = section.querySelector('.section-content').innerHTML;
+            });
+
+            // --- Mobile Sidebar Toggle ---
+            if (sidebarToggle && sidebarNav) {
+                sidebarToggle.addEventListener('click', function() {
+                    const isExpanded = this.getAttribute('aria-expanded') === 'true';
+                    this.setAttribute('aria-expanded', !isExpanded);
+                    sidebarNav.classList.toggle('open'); // This will control max-height
+                    this.classList.toggle('active'); // Toggle class for icon change
+                    if (sidebarNav.classList.contains('open')) {
+                        sidebarNav.style.maxHeight = sidebarNav.scrollHeight + "px";
+                    } else {
+                        sidebarNav.style.maxHeight = "0";
+                    }
+                });
+            }
+
+            // --- Smooth Scrolling & Active Link Highlighting ---
+            sidebarLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault(); // Prevent default jump
+
+                    const targetId = this.getAttribute('href');
+                    const targetSection = document.querySelector(targetId);
+
+                    if (targetSection) {
+                        // Scroll smoothly to the target section
+                        targetSection.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start' // Scroll to the top of the section
+                        });
+
+                        // Update active class immediately for visual feedback
+                        sidebarLinks.forEach(innerLink => {
+                            innerLink.classList.remove('active');
+                        });
+                        this.classList.add('active');
+
+
+                        // Close sidebar on mobile after clicking a link
+                        if (window.innerWidth <= 1023 && sidebarNav.classList.contains('open')) { // 1023px is lg breakpoint
+                            sidebarToggle.click(); // Programmatically click the toggle button
+                        }
+                    }
+                });
+            });
+
+            // Intersection Observer for highlighting sidebar links on scroll
+            const observerOptions = {
+                root: null, // relative to the viewport
+                rootMargin: '0px',
+                threshold: 0.3 // Section is active when 30% visible (adjust as needed)
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const id = entry.target.id;
+                        sidebarLinks.forEach(link => {
+                            link.classList.remove('active'); // Remove active from all
+                            if (link.getAttribute('href') === `#${id}`) {
+                                link.classList.add('active'); // Add active to the current section's link
+                            }
+                        });
+                    }
+                });
+            }, observerOptions);
+
+            // Observe each policy section
+            policySections.forEach(section => {
+                observer.observe(section);
+            });
+
+            // --- Search Functionality ---
+            policySearchInput.addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase().trim();
+
+                policySections.forEach(section => {
+                    const sectionContentElement = section.querySelector('.section-content');
+                    const sectionTitleElement = section.querySelector('.section-title');
+                    const originalSectionContent = originalContent[section.id]; // Get original HTML
+
+                    // Reset content to its original state (remove previous highlights)
+                    sectionContentElement.innerHTML = originalSectionContent;
+
+                    let sectionMatches = false;
+
+                    if (searchTerm === '') {
+                        section.style.display = 'block'; // Show all sections
+                        return; // Exit early if search term is empty
+                    }
+
+                    // Check if section title matches
+                    if (sectionTitleElement.textContent.toLowerCase().includes(searchTerm)) {
+                        sectionMatches = true;
+                    }
+
+                    // Highlight and check if section content matches
+                    const regex = new RegExp(`(${searchTerm})`, 'gi');
+                    const highlightedContent = originalSectionContent.replace(regex, '<span class="highlight">$1</span>');
+
+                    if (highlightedContent !== originalSectionContent) {
+                        sectionContentElement.innerHTML = highlightedContent;
+                        sectionMatches = true;
+                    }
+
+                    // Show or hide the section based on whether it contains the search term
+                    if (sectionMatches) {
+                        section.style.display = 'block';
+                    } else {
+                        section.style.display = 'none';
+                    }
+                });
+            });
+
+            // --- Initial Active Link State on Load ---
+            if (sidebarLinks.length > 0) {
+                if (!window.location.hash) {
+                    sidebarLinks[0].classList.add('active');
+                } else {
+                    const hashLink = document.querySelector(`.sidebar-link[href="${window.location.hash}"]`);
+                    if (hashLink) {
+                        hashLink.classList.add('active');
+                        document.querySelector(window.location.hash).scrollIntoView({
+                            behavior: 'instant',
+                            block: 'start'
+                        });
+                    } else {
+                        sidebarLinks[0].classList.add('active');
+                    }
+                }
+            }
+        });
+    </script>
+    </body>
+</html>

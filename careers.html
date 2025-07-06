@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers at TravelBooking.com</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* Light gray background */
+        }
+        /* Custom modal styles */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1000; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            max-width: 600px;
+            width: 90%;
+            position: relative;
+            animation-name: animatetop;
+            animation-duration: 0.4s
+        }
+        /* Add Animation */
+        @keyframes animatetop {
+            from {top: -300px; opacity: 0}
+            to {top: 0; opacity: 1}
+        }
+        .close-button {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            position: absolute;
+            top: 10px;
+            right: 20px;
+        }
+        .close-button:hover,
+        .close-button:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: #334155; /* Slate 700 */
+        }
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #cbd5e1; /* Slate 300 */
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            transition: border-color 0.2s;
+        }
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            /* Changed from blue to red for focus */
+            border-color: #ef4444; /* Red 500 */
+            box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.3); /* Red 500 with opacity */
+        }
+        .form-group textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+        .file-input-label {
+            display: block;
+            width: 100%;
+            padding: 0.75rem 1rem;
+            /* Changed from blue-50 to red-50 */
+            background-color: #fef2f2; /* Red 50 */
+            /* Changed from blue-300 to red-300 */
+            border: 1px dashed #fca5a5; /* Red 300 */
+            border-radius: 0.5rem;
+            cursor: pointer;
+            text-align: center;
+            /* Changed from blue-600 to red-600 */
+            color: #dc2626; /* Red 600 */
+            font-weight: 500;
+            transition: background-color 0.2s, border-color 0.2s;
+        }
+        .file-input-label:hover {
+            /* Changed from blue-100 to red-100 */
+            background-color: #fee2e2; /* Red 100 */
+            /* Changed from blue-400 to red-400 */
+            border-color: #f87171; /* Red 400 */
+        }
+        .file-input-label input[type="file"] {
+            display: none;
+        }
+    </style>
+</head>
+<body class="antialiased text-gray-800">
+
+    <header class="bg-red-600 shadow-md p-4 md:p-6">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="home.php" class="text-white text-2xl md:text-3xl font-bold rounded-lg px-2 py-1 hover:bg-red-700 transition duration-300">TravelBooking.com</a>
+            <nav>
+                <ul class="flex space-x-4 md:space-x-8">
+                    <li><a href="home.php" class="text-white hover:text-red-200 text-lg rounded-lg px-3 py-2 transition duration-300">Home</a></li>
+                    <li><a href="about.php" class="text-white hover:text-red-200 text-lg rounded-lg px-3 py-2 transition duration-300">About Us</a></li>
+                    <li><a href="careers.html" class="text-white text-lg font-semibold bg-red-700 rounded-lg px-3 py-2 hover:bg-red-800 transition duration-300">Careers</a></li>
+                    <li><a href="contact.php" class="text-white hover:text-red-200 text-lg rounded-lg px-3 py-2 transition duration-300">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="relative bg-gradient-to-r from-red-500 to-red-700 text-white py-16 md:py-24 text-center overflow-hidden rounded-b-xl shadow-lg">
+        <div class="absolute inset-0 bg-pattern opacity-10"></div>
+        <div class="container mx-auto px-4 relative z-10">
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-4 leading-tight">Join Our Journey</h1>
+            <p class="text-lg md:text-xl max-w-3xl mx-auto mb-8">
+                Be a part of a dynamic team that's redefining travel experiences globally.
+                We're looking for passionate individuals to grow with us!
+            </p>
+            <a href="#openings" class="bg-white text-red-700 hover:bg-red-100 font-bold py-3 px-8 rounded-full text-lg shadow-xl transform hover:scale-105 transition duration-300 ease-in-out">
+                Explore Open Positions
+            </a>
+        </div>
+    </section>
+
+    <section class="py-12 md:py-20 bg-white rounded-lg shadow-md mx-4 md:mx-auto max-w-6xl mt-8">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-10 text-red-700">Why Work With Us?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="flex flex-col items-center p-6 bg-red-50 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <div class="text-red-600 text-5xl mb-4">✈️</div>
+                    <h3 class="text-xl font-semibold mb-2">Impactful Work</h3>
+                    <p class="text-center text-gray-600">Shape the future of travel and make a real difference in how people explore the world.</p>
+                </div>
+                <div class="flex flex-col items-center p-6 bg-red-50 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <div class="text-red-600 text-5xl mb-4">💡</div>
+                    <h3 class="text-xl font-semibold mb-2">Innovation & Growth</h3>
+                    <p class="text-center text-gray-600">Work in an environment that fosters creativity, learning, and continuous professional development.</p>
+                </div>
+                <div class="flex flex-col items-center p-6 bg-red-50 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <div class="text-red-600 text-5xl mb-4">💖</div>
+                    <h3 class="text-xl font-semibold mb-2">Collaborative Culture</h3>
+                    <p class="text-center text-gray-600">Join a diverse and inclusive team that values collaboration, respect, and mutual support.</p>
+                </div>
+                <div class="flex flex-col items-center p-6 bg-red-50 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <div class="text-red-600 text-5xl mb-4">🌐</div>
+                    <h3 class="text-xl font-semibold mb-2">Global Reach</h3>
+                    <p class="text-center text-gray-600">Contribute to a platform with a global footprint, connecting travelers from all corners of the world.</p>
+                </div>
+                <div class="flex flex-col items-center p-6 bg-red-50 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <div class="text-red-600 text-5xl mb-4">💰</div>
+                    <h3 class="text-xl font-semibold mb-2">Competitive Benefits</h3>
+                    <p class="text-center text-gray-600">Enjoy attractive compensation packages, health benefits, and travel perks.</p>
+                </div>
+                <div class="flex flex-col items-center p-6 bg-red-50 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <div class="text-red-600 text-5xl mb-4">🎉</div>
+                    <h3 class="text-xl font-semibold mb-2">Fun & Engaging</h3>
+                    <p class="text-center text-gray-600">Experience a vibrant work environment with team events, social gatherings, and a passion for travel.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="openings" class="py-12 md:py-20 bg-gray-50 rounded-lg shadow-md mx-4 md:mx-auto max-w-6xl mt-8">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-10 text-red-700">Current Opportunities</h2>
+
+            <div class="mb-12">
+                <h3 class="text-2xl font-bold text-red-600 mb-6 border-b-2 border-red-200 pb-2">Engineering</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col justify-between items-start">
+                        <div>
+                            <h4 class="text-xl font-semibold mb-2">Senior Frontend Developer</h4>
+                            <p class="text-gray-600 mb-4">Location: Remote / Bengaluru, India</p>
+                        </div>
+                        <button onclick="openApplyModal('Senior Frontend Developer')" class="bg-red-600 text-white hover:bg-red-700 font-medium py-2 px-6 rounded-full text-sm mt-auto">Apply Now</button>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col justify-between items-start">
+                        <div>
+                            <h4 class="text-xl font-semibold mb-2">Backend Engineer (Node.js)</h4>
+                            <p class="text-gray-600 mb-4">Location: Bengaluru, India</p>
+                        </div>
+                        <button onclick="openApplyModal('Backend Engineer (Node.js)')" class="bg-red-600 text-white hover:bg-red-700 font-medium py-2 px-6 rounded-full text-sm mt-auto">Apply Now</button>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col justify-between items-start">
+                        <div>
+                            <h4 class="text-xl font-semibold mb-2">DevOps Specialist</h4>
+                            <p class="text-gray-600 mb-4">Location: Remote / Mumbai, India</p>
+                        </div>
+                        <button onclick="openApplyModal('DevOps Specialist')" class="bg-red-600 text-white hover:bg-red-700 font-medium py-2 px-6 rounded-full text-sm mt-auto">Apply Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-12">
+                <h3 class="text-2xl font-bold text-red-600 mb-6 border-b-2 border-red-200 pb-2">Marketing</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col justify-between items-start">
+                        <div>
+                            <h4 class="text-xl font-semibold mb-2">Digital Marketing Manager</h4>
+                            <p class="text-gray-600 mb-4">Location: Delhi, India</p>
+                        </div>
+                        <button onclick="openApplyModal('Digital Marketing Manager')" class="bg-red-600 text-white hover:bg-red-700 font-medium py-2 px-6 rounded-full text-sm mt-auto">Apply Now</button>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col justify-between items-start">
+                        <div>
+                            <h4 class="text-xl font-semibold mb-2">Content Writer (Travel Niche)</h4>
+                            <p class="text-gray-600 mb-4">Location: Remote</p>
+                        </div>
+                        <button onclick="openApplyModal('Content Writer (Travel Niche)')" class="bg-red-600 text-white hover:bg-red-700 font-medium py-2 px-6 rounded-full text-sm mt-auto">Apply Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="text-2xl font-bold text-red-600 mb-6 border-b-2 border-red-200 pb-2">Customer Support</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col justify-between items-start">
+                        <div>
+                            <h4 class="text-xl font-semibold mb-2">Customer Service Representative</h4>
+                            <p class="text-gray-600 mb-4">Location: Hyderabad, India</p>
+                        </div>
+                        <button onclick="openApplyModal('Customer Service Representative')" class="bg-red-600 text-white hover:bg-red-700 font-medium py-2 px-6 rounded-full text-sm mt-auto">Apply Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-white py-8 mt-8">
+        <div class="container mx-auto text-center px-4">
+            <p>&copy; 2025 TravelBooking.com. All rights reserved.</p>
+            <div class="flex justify-center space-x-4 mt-4">
+                <a href="#" class="text-gray-400 hover:text-white transition duration-300">Privacy Policy</a>
+                <a href="#" class="text-gray-400 hover:text-white transition duration-300">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <div id="applyModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeApplyModal()">&times;</span>
+            <h2 id="modalJobTitle" class="text-2xl font-bold text-red-700 mb-6">Apply for [Job Title]</h2>
+
+            <form id="applicationForm" onsubmit="handleFormSubmit(event)">
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" name="fullName" placeholder="Your full name" required class="rounded-lg">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="your.email@example.com" required class="rounded-lg">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+1 (555) 123-4567" class="rounded-lg">
+                </div>
+                <div class="form-group">
+                    <label for="resume">Upload Resume (PDF, DOCX) <span class="text-gray-500 text-sm">(Optional)</span></label>
+                    <label for="resume" class="file-input-label">
+                        <span id="resumeFileName">No file chosen</span>
+                        <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx"> </label>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message / Cover Letter (Optional)</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Tell us about yourself and why you're a good fit..." class="rounded-lg"></textarea>
+                </div>
+
+                <div class="text-center mt-8">
+                    <button type="submit" class="bg-red-600 text-white hover:bg-red-700 font-bold py-3 px-8 rounded-full text-lg shadow-xl transform hover:scale-105 transition duration-300 ease-in-out">
+                        Submit Application
+                    </button>
+                </div>
+            </form>
+            <div id="successMessage" class="hidden text-center text-green-700 font-semibold mt-4">
+                Thank you for your application! We will review it shortly.
+            </div>
+            <div id="errorMessage" class="hidden text-center text-red-700 font-semibold mt-4">
+                There was an error submitting your application. Please try again.
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const applyModal = document.getElementById('applyModal');
+        const modalJobTitle = document.getElementById('modalJobTitle');
+        const applicationForm = document.getElementById('applicationForm');
+        const successMessage = document.getElementById('successMessage');
+        const errorMessage = document.getElementById('errorMessage');
+        const resumeInput = document.getElementById('resume');
+        const resumeFileNameSpan = document.getElementById('resumeFileName');
+
+        function openApplyModal(jobTitle) {
+            modalJobTitle.textContent = `Apply for ${jobTitle}`;
+            applyModal.style.display = 'flex'; // Use flex to center
+            successMessage.classList.add('hidden'); // Hide success message
+            errorMessage.classList.add('hidden'); // Hide error message
+            applicationForm.reset(); // Clear form fields
+            resumeFileNameSpan.textContent = 'No file chosen'; // Reset file name display
+        }
+
+        function closeApplyModal() {
+            applyModal.style.display = 'none';
+        }
+
+        // Close modal when clicking outside of the modal content
+        window.onclick = function(event) {
+            if (event.target == applyModal) {
+                closeApplyModal();
+            }
+        }
+
+        // Update resume file name display
+        resumeInput.addEventListener('change', function() {
+            if (this.files.length > 0) {
+                resumeFileNameSpan.textContent = this.files[0].name;
+            } else {
+                resumeFileNameSpan.textContent = 'No file chosen';
+            }
+        });
+
+
+        async function handleFormSubmit(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            const formData = new FormData(applicationForm);
+            // Add the job title to the form data
+            formData.append('jobTitle', modalJobTitle.textContent.replace('Apply for ', ''));
+
+
+            // --- Actual Backend Integration ---
+            try {
+                const response = await fetch('submit_application.php', { // Point to your PHP script
+                    method: 'POST',
+                    body: formData // FormData works directly with fetch for file uploads
+                });
+
+                const result = await response.json(); // Assuming PHP returns JSON
+
+                applicationForm.classList.add('hidden'); // Hide the form after submission attempt
+
+                if (result.success) {
+                    successMessage.classList.remove('hidden');
+                    errorMessage.classList.add('hidden');
+                    console.log('Application submitted successfully:', result.message);
+                    // You might want to close the modal after a short delay
+                    setTimeout(closeApplyModal, 3000); // Close after 3 seconds
+                } else {
+                    errorMessage.classList.remove('hidden');
+                    successMessage.classList.add('hidden');
+                    console.error('Error submitting application:', result.message);
+                }
+            } catch (error) {
+                // Handle network errors or issues with JSON parsing
+                errorMessage.classList.remove('hidden');
+                successMessage.classList.add('hidden');
+                console.error('Network or parsing error:', error);
+            }
+            // --- End Actual Backend Integration ---
+        }
+    </script>
+
+</body>
+</html>

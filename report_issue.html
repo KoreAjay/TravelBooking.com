@@ -1,0 +1,1114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sair Karo's Report an Issue policy guides users on how to report problems and what information to provide for quick resolution.">
+    <title>Report an Issue - Sair Karo</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrpSgXJ6L/B6g0s2sU6N5uO/nC7Z1j4K4yI0+I/r9wz9L/Q1P/6r/j+8Xw0Q2f5uM3o2p/y9q2yq3t/8A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        /* Universal Box-sizing */
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+
+        :root {
+            /* Travel-themed color palette (consistent across all policy pages) */
+            --primary-red: #dc3545; /* For main accents, buttons (a strong red) */
+            --secondary-red: #ef5350; /* Lighter red for hover states or secondary elements */
+            --light-red: #f8d7da; /* Very light red for backgrounds or borders */
+            --dark-red: #c82333; /* Darker red for active states or strong emphasis */
+            --light-bg: #f8f9fa; /* Very light grey for background */
+            --card-bg: #ffffff; /* White for content cards */
+            --text-dark: #343a40; /* Main dark text */
+            --text-medium: #6c757d; /* Medium grey text */
+            --text-light: #e9ecef; /* Light text for dark backgrounds */
+            --border-light: #dee2e6; /* Light border */
+            --highlight-yellow: #ffc107; /* Highlight color */
+        }
+
+        /* Base Body Styles */
+        body {
+            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.7;
+            margin: 0;
+            padding: 0;
+            background-color: var(--light-bg);
+            color: var(--text-dark);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Skip to Content Link for Accessibility */
+        .skip-to-content-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--primary-red);
+            color: white;
+            padding: 8px;
+            z-index: 1000;
+            transition: top 0.3s ease-in-out;
+        }
+        .skip-to-content-link:focus {
+            top: 0;
+        }
+
+        /* Header & Footer Styles (consistent across all policy pages) */
+        header {
+            background-color: var(--primary-red);
+            color: white;
+            padding: 15px 30px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header .logo a {
+            color: white;
+            font-size: 1.8em;
+            font-weight: bold;
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+        header nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        header nav ul li {
+            margin-left: 25px;
+        }
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.2s ease;
+        }
+        header nav ul li a:hover {
+            opacity: 0.8;
+        }
+
+        footer {
+            background-color: var(--text-dark); /* Dark background for footer */
+            color: var(--text-light); /* Light text on dark background */
+            padding: 40px 30px;
+            margin-top: auto;
+            box-shadow: 0 -2px 8px rgba(0,0,0,0.1);
+            font-size: 0.9em;
+        }
+
+        footer .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px; /* Space between columns */
+        }
+
+        footer .footer-content .col-md-4,
+        footer .footer-content .col-lg-2,
+        footer .footer-content .col-lg-3 {
+            flex: 1; /* Distribute space */
+            min-width: 200px; /* Minimum width for columns before wrapping */
+        }
+
+        footer h5 {
+            color: var(--primary-red); /* Red headings for footer sections */
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        footer h5::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--secondary-red);
+        }
+
+        footer ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        footer ul li {
+            margin-bottom: 10px;
+        }
+
+        footer ul li a {
+            color: var(--text-light);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        footer ul li a:hover {
+            color: var(--primary-red); /* Highlight on hover */
+        }
+
+        footer address p {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        footer address p i {
+            margin-right: 10px;
+            color: var(--primary-red);
+        }
+
+        footer .social-links a {
+            color: var(--text-light);
+            font-size: 1.5em;
+            margin-right: 15px;
+            transition: color 0.2s ease;
+        }
+
+        footer .social-links a:hover {
+            color: var(--primary-red);
+        }
+
+        footer .copyright {
+            text-align: center;
+            width: 100%;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--text-medium);
+        }
+
+
+        /* Main Policy Wrapper (consistent across all policy pages) */
+        .policy-wrapper {
+            display: flex;
+            flex-grow: 1;
+            max-width: 1300px;
+            margin: 25px auto;
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            overflow: hidden;
+            transition: all 0.3s ease-in-out;
+        }
+
+        /* Sidebar Navigation (consistent across all policy pages) */
+        .sidebar {
+            width: 300px;
+            flex-shrink: 0;
+            background-color: var(--light-red); /* Light red background for sidebar */
+            padding: 30px 25px;
+            border-right: 1px solid var(--border-light);
+            position: sticky;
+            top: 0;
+            align-self: flex-start;
+            height: 100vh;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .sidebar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--primary-red); /* Red border */
+        }
+
+        .sidebar h2 {
+            color: var(--primary-red); /* Red heading */
+            font-size: 1.6em;
+            margin: 0;
+            line-height: 1.2;
+        }
+
+        .sidebar-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.8em;
+            cursor: pointer;
+            color: var(--primary-red); /* Red toggle icon */
+            padding: 5px;
+            border-radius: 5px;
+            transition: background-color 0.2s ease;
+        }
+        .sidebar-toggle:hover {
+            background-color: rgba(220, 53, 69, 0.1); /* Light red hover */
+        }
+        .sidebar-toggle .fa-times {
+            display: none;
+        }
+
+        .sidebar nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .sidebar nav ul li {
+            margin-bottom: 8px;
+        }
+
+        .sidebar nav ul li a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            padding: 10px 15px;
+            border-radius: 6px;
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+            font-size: 0.95em;
+        }
+
+        .sidebar nav ul li a:hover,
+        .sidebar nav ul li a.active {
+            background-color: var(--primary-red); /* Red active/hover */
+            color: white;
+            transform: translateX(5px);
+            box-shadow: 0 2px 10px rgba(220, 53, 69, 0.2); /* Red shadow */
+        }
+
+        .sidebar-icon {
+            margin-right: 12px;
+            font-size: 1.1em;
+            color: var(--text-medium);
+            transition: color 0.3s ease;
+        }
+
+        .sidebar nav ul li a.active .sidebar-icon {
+            color: white;
+        }
+
+        /* Main Content Area (consistent across all policy pages) */
+        .content {
+            flex: 1;
+            padding: 30px 40px;
+            position: relative;
+        }
+
+        .policy-heading {
+            color: var(--primary-red); /* Red heading */
+            font-size: 2.8em;
+            margin-top: 0;
+            margin-bottom: 10px;
+            border-bottom: 3px solid var(--primary-red); /* Red border */
+            padding-bottom: 15px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
+        }
+
+        .last-updated {
+            font-style: italic;
+            color: var(--text-medium);
+            margin-bottom: 30px;
+            font-size: 0.9em;
+        }
+
+        /* Search Bar (consistent across all policy pages) */
+        .search-box {
+            position: relative;
+            margin-bottom: 35px;
+        }
+
+        .search-box input[type="text"] {
+            width: 100%;
+            padding: 12px 15px 12px 45px;
+            border: 1px solid var(--border-light);
+            border-radius: 30px;
+            font-size: 1em;
+            box-shadow: inset 0 1px 5px rgba(0,0,0,0.05);
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+            color: var(--text-dark);
+        }
+
+        .search-box input[type="text"]::placeholder {
+            color: var(--text-medium);
+        }
+
+        .search-box input[type="text"]:focus {
+            border-color: var(--primary-red); /* Red border on focus */
+            outline: none;
+            box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25); /* Red shadow on focus */
+        }
+
+        .search-box .search-icon {
+            position: absolute;
+            left: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-medium);
+            font-size: 1.1em;
+        }
+
+        /* Policy Sections (consistent across all policy pages) */
+        .policy-section {
+            margin-bottom: 40px;
+            padding-bottom: 25px;
+            border-bottom: 1px dashed var(--border-light);
+        }
+
+        .policy-section:last-child {
+            border-bottom: none;
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            color: var(--primary-red); /* Red section titles */
+            font-size: 2em;
+            margin-top: 0;
+            margin-bottom: 20px;
+            position: relative;
+            padding-left: 35px;
+            line-height: 1.3;
+        }
+
+        .section-icon {
+            position: absolute;
+            left: 0;
+            top: 5px;
+            color: var(--primary-red); /* Red icons */
+            font-size: 0.9em;
+        }
+
+        .section-content {
+            font-size: 1em;
+            color: var(--text-dark);
+        }
+        .section-content h3 {
+            color: var(--primary-red); /* Red subheadings */
+            font-size: 1.3em;
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+        .section-content ul {
+            list-style-type: disc;
+            margin-left: 25px;
+            padding: 0;
+            line-height: 1.8;
+        }
+        .section-content ul li {
+            margin-bottom: 8px;
+        }
+        .section-content ol {
+            list-style-type: decimal;
+            margin-left: 25px;
+            padding: 0;
+            line-height: 1.8;
+        }
+        .section-content ol li {
+            margin-bottom: 8px;
+        }
+        .section-content strong {
+            color: var(--text-dark);
+        }
+        .section-content a {
+            color: var(--primary-red); /* Red links */
+            text-decoration: none;
+            transition: text-decoration 0.2s ease;
+        }
+        .section-content a:hover {
+            text-decoration: underline;
+        }
+
+        /* Highlighted search results (consistent across all policy pages) */
+        .highlight {
+            background-color: var(--highlight-yellow);
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-weight: bold;
+            color: var(--text-dark);
+        }
+
+        /* Call to action (consistent across all policy pages) */
+        .call-to-action {
+            background-color: var(--light-red); /* Light red background */
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            margin-top: 40px;
+            border: 1px solid var(--secondary-red); /* Secondary red border */
+        }
+        .call-to-action p {
+            margin: 0;
+            font-size: 1.1em;
+            color: var(--dark-red); /* Darker red text */
+        }
+        .call-to-action a {
+            color: var(--primary-red); /* Primary red links */
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .call-to-action a:hover {
+            text-decoration: underline;
+        }
+
+        /* Return to Top Button (consistent across all policy pages) */
+        .return-to-top {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .scroll-to-top {
+            display: inline-flex;
+            align-items: center;
+            padding: 12px 25px;
+            background-color: var(--primary-red); /* Primary red background */
+            color: #fff;
+            text-decoration: none;
+            border-radius: 30px;
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            font-weight: bold;
+            font-size: 1em;
+            box-shadow: 0 4px 10px rgba(220, 53, 69, 0.2); /* Red shadow */
+        }
+
+        .scroll-to-top:hover {
+            background-color: var(--dark-red); /* Darker red on hover */
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(220, 53, 69, 0.3); /* Darker red shadow */
+        }
+
+        .scroll-to-top i {
+            margin-right: 10px;
+            font-size: 1.2em;
+        }
+
+        /* --- Responsive Design Media Queries (consistent across all policy pages) --- */
+
+        @media (max-width: 991px) {
+            .policy-wrapper {
+                flex-direction: column;
+                margin: 15px;
+                border-radius: 8px;
+                box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            }
+
+            .sidebar {
+                width: 100%;
+                position: relative;
+                height: auto;
+                border-right: none;
+                border-bottom: 1px solid var(--border-light);
+                padding: 20px;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+                overflow-y: hidden;
+            }
+
+            .sidebar-header {
+                border-bottom: none;
+                margin-bottom: 0;
+                padding-bottom: 0;
+            }
+
+            .sidebar h2 {
+                font-size: 1.4em;
+            }
+
+            .sidebar-toggle {
+                display: block;
+            }
+
+            .sidebar nav ul {
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.4s ease-out, border-top 0.4s ease-out;
+                border-top: 1px solid transparent;
+            }
+            .sidebar nav ul.open {
+                max-height: 500px;
+                border-top: 1px solid var(--secondary-red); /* Light red border */
+                padding-top: 15px;
+                margin-top: 15px;
+            }
+
+            .sidebar-toggle .fa-bars.active-icon { display: none; }
+            .sidebar-toggle .fa-times.active-icon { display: inline-block; }
+
+            .content {
+                padding: 25px 25px;
+            }
+
+            .policy-heading {
+                font-size: 2.2em;
+            }
+
+            .section-title {
+                font-size: 1.8em;
+                padding-left: 30px;
+            }
+
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 15px 20px;
+            }
+            header nav ul {
+                flex-direction: column;
+                width: 100%;
+                margin-top: 10px;
+                display: none;
+            }
+            header nav ul.mobile-menu-open {
+                display: flex;
+            }
+            header nav ul li {
+                margin: 5px 0;
+                width: 100%;
+            }
+            header nav ul li a {
+                padding: 8px 10px;
+                background-color: rgba(255,255,255,0.1);
+                border-radius: 5px;
+            }
+
+            footer .footer-content {
+                flex-direction: column;
+                gap: 30px;
+            }
+            footer .footer-content .col-md-4,
+            footer .footer-content .col-lg-2,
+            footer .footer-content .col-lg-3 {
+                min-width: unset; /* Remove min-width on smaller screens */
+            }
+            footer h5 {
+                margin-bottom: 15px;
+            }
+            footer h5::after {
+                width: 40px; /* Adjust underline width */
+            }
+        }
+
+        @media (max-width: 767px) {
+            .policy-heading {
+                font-size: 1.8em;
+                padding-bottom: 10px;
+            }
+
+            .last-updated {
+                margin-bottom: 20px;
+            }
+
+            .search-box input[type="text"] {
+                padding: 10px 12px 10px 40px;
+                font-size: 0.9em;
+            }
+            .search-box .search-icon {
+                left: 15px;
+                font-size: 1em;
+            }
+
+            .section-title {
+                font-size: 1.5em;
+                padding-left: 25px;
+            }
+
+            .section-icon {
+                font-size: 0.8em;
+                top: 3px;
+            }
+
+            .section-content {
+                font-size: 0.95em;
+            }
+
+            .return-to-top {
+                margin-top: 30px;
+            }
+            .scroll-to-top {
+                padding: 10px 20px;
+                font-size: 0.9em;
+            }
+            .scroll-to-top i {
+                margin-right: 8px;
+                font-size: 1.1em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .policy-wrapper {
+                margin: 10px;
+                border-radius: 5px;
+            }
+
+            .sidebar {
+                padding: 15px;
+            }
+
+            .sidebar nav ul.open {
+                max-height: 400px;
+            }
+
+            .content {
+                padding: 20px;
+            }
+
+            .policy-heading {
+                font-size: 1.5em;
+            }
+
+            .section-title {
+                font-size: 1.3em;
+                padding-left: 20px;
+            }
+            .section-icon {
+                font-size: 0.7em;
+                top: 2px;
+            }
+            .section-content ul {
+                margin-left: 15px;
+            }
+
+            .call-to-action {
+                padding: 15px;
+                font-size: 0.95em;
+            }
+        }
+    </style>
+    </head>
+<body>
+
+    <header>
+        <nav aria-label="Main Navigation">
+            <div class="logo">
+                <a href="home.php">Sair Karo</a>
+            </div>
+            <ul>
+                <li><a href="home.php">Home</a></li>
+                <li><a href="contact.php">Contact Us</a></li>
+                <li><a href="privacy_policy.html">Privacy Policy</a></li>
+                <li><a href="terms_conditions.html">Terms & Conditions</a></li>
+                <li><a href="refund_policy.html">Refund Policy</a></li>
+                <li><a href="cookie_policy.html">Cookie Policy</a></li>
+                <li><a href="faq.html">FAQs</a></li>
+                <li><a href="report_issue.html" aria-current="page">Report an Issue</a></li>
+            </ul>
+        </nav>
+    </header>
+    <a href="#main-content" class="skip-to-content-link">Skip to main content</a>
+
+    <div class="policy-wrapper" role="document">
+        <aside class="sidebar" aria-label="Report an Issue Navigation" id="sidebar">
+            <div class="sidebar-header">
+                <h2>Sections</h2>
+                <button class="sidebar-toggle" id="sidebar-toggle" aria-expanded="false" aria-controls="sidebar-nav">
+                    <i class="fas fa-bars"></i>
+                    <span class="sr-only">Toggle navigation</span>
+                </button>
+            </div>
+            <nav id="sidebar-nav" aria-label="Report an Issue Sections">
+                <ul>
+                    <li>
+                        <a href="#introduction" class="sidebar-link">
+                            <i class="fas fa-info-circle sidebar-icon" aria-hidden="true"></i> Introduction
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#how-to-report" class="sidebar-link">
+                            <i class="fas fa-headset sidebar-icon" aria-hidden="true"></i> How to Report an Issue
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#what-to-include" class="sidebar-link">
+                            <i class="fas fa-clipboard-list sidebar-icon" aria-hidden="true"></i> What Information to Include
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#our-process" class="sidebar-link">
+                            <i class="fas fa-hourglass-start sidebar-icon" aria-hidden="true"></i> Our Resolution Process
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#types-of-issues" class="sidebar-link">
+                            <i class="fas fa-bug sidebar-icon" aria-hidden="true"></i> Types of Issues to Report
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#follow-up" class="sidebar-link">
+                            <i class="fas fa-comments sidebar-icon" aria-hidden="true"></i> Follow-Up & Communication
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#policy-changes" class="sidebar-link">
+                            <i class="fas fa-redo-alt sidebar-icon" aria-hidden="true"></i> Changes to Policy
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#contact-us" class="sidebar-link">
+                            <i class="fas fa-envelope sidebar-icon" aria-hidden="true"></i> Contact Us
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="content" id="main-content">
+            <h1 class="policy-heading">Report an Issue to Sair Karo</h1>
+            <p class="last-updated">Last updated: <time datetime="2025-06-23">June 23, 2025</time></p>
+
+            <div class="search-box">
+                <label for="policySearch" class="sr-only">Search Report Issue Policy</label>
+                <input type="text" id="policySearch" placeholder="Search issue policy..." aria-label="Search Report Issue Policy">
+                <i class="fas fa-search search-icon" aria-hidden="true"></i>
+            </div>
+
+            <div id="policyContent">
+                <section id="introduction" class="policy-section" aria-labelledby="introduction-title">
+                    <h2 class="section-title" id="introduction-title">
+                        <i class="fas fa-info-circle section-icon" aria-hidden="true"></i> Introduction
+                    </h2>
+                    <div class="section-content">
+                        <p>At Sair Karo, we are committed to providing you with a seamless and reliable travel booking experience. If you encounter any problems, technical issues, or have concerns regarding our services, we encourage you to report them to us promptly. Your feedback is invaluable in helping us improve and ensure a better experience for all users.</p>
+                        <p>This policy outlines the steps to report an issue, the information you should provide, and what you can expect from our support team.</p>
+                    </div>
+                </section>
+
+                <section id="how-to-report" class="policy-section" aria-labelledby="how-to-report-title">
+                    <h2 class="section-title" id="how-to-report-title">
+                        <i class="fas fa-headset section-icon" aria-hidden="true"></i> How to Report an Issue
+                    </h2>
+                    <div class="section-content">
+                        <p>You can report an issue through the following channels:</p>
+                        <ol>
+                            <li><strong>Through our Contact Form:</strong> The easiest way to report a non-urgent issue is by filling out the dedicated form on our <a href="contact.php">Contact Us page</a>.</li>
+                            <li><strong>Via Email:</strong> For detailed reports, you can email our support team directly at <a href="mailto:support@sairkaro.com">support@sairkaro.com</a>.</li>
+                            <li><strong>Live Chat (if available):</strong> For immediate assistance with urgent issues during business hours, you may use our live chat feature on the website.</li>
+                            <li><strong>Phone Support:</strong> For critical issues requiring immediate verbal communication, you can call us at +91 98765 43210.</li>
+                        </ol>
+                        <p>Please choose the most appropriate method based on the urgency and complexity of your issue.</p>
+                    </div>
+                </section>
+
+                <section id="what-to-include" class="policy-section" aria-labelledby="what-to-include-title">
+                    <h2 class="section-title" id="what-to-include-title">
+                        <i class="fas fa-clipboard-list section-icon" aria-hidden="true"></i> What Information to Include
+                    </h2>
+                    <div class="section-content">
+                        <p>To help us resolve your issue as quickly and efficiently as possible, please include the following information in your report:</p>
+                        <ul>
+                            <li><strong>Your Contact Information:</strong> Full name, email address, and phone number associated with your Sair Karo account.</li>
+                            <li><strong>Booking ID (if applicable):</strong> For issues related to specific bookings (flights, trains, buses).</li>
+                            <li><strong>Type of Issue:</strong> Briefly describe whether it's a technical bug, payment problem, booking error, content inaccuracy, etc.</li>
+                            <li><strong>Detailed Description:</strong> Explain the problem clearly and concisely. Include:
+                                <ul>
+                                    <li>What you were trying to do.</li>
+                                    <li>What happened instead.</li>
+                                    <li>The exact error message (if any).</li>
+                                </ul>
+                            </li>
+                            <li><strong>Date and Time of Occurrence:</strong> Approximately when the issue occurred.</li>
+                            <li><strong>Steps to Reproduce:</strong> If possible, list the steps we can take to see the issue ourselves.</li>
+                            <li><strong>Device & Browser Information:</strong> (e.g., "Chrome on Windows 10," "Safari on iPhone," "Android app version X.X").</li>
+                            <li><strong>Screenshots or Videos:</strong> Attach any relevant screenshots or short videos that demonstrate the issue. This is highly recommended for visual bugs.</li>
+                        </ul>
+                        <p>The more details you provide, the faster our team can investigate and resolve the problem.</p>
+                    </div>
+                </section>
+
+                <section id="our-process" class="policy-section" aria-labelledby="our-process-title">
+                    <h2 class="section-title" id="our-process-title">
+                        <i class="fas fa-hourglass-start section-icon" aria-hidden="true"></i> Our Resolution Process
+                    </h2>
+                    <div class="section-content">
+                        <p>Once we receive your issue report, here's what you can expect:</p>
+                        <ol>
+                            <li><strong>Acknowledgement:</strong> You will receive an automated email confirmation that your report has been received, usually within minutes.</li>
+                            <li><strong>Initial Review & Prioritization:</strong> Our support team will review your report, categorize it, and prioritize it based on its impact and severity.</li>
+                            <li><strong>Investigation:</strong> Our technical team will investigate the issue. This may involve replicating the problem and analyzing logs.</li>
+                            <li><strong>Resolution or Workaround:</strong> We will aim to resolve the issue directly or provide a temporary workaround. For complex bugs, this might involve a patch or update.</li>
+                            <li><strong>Communication:</strong> We will keep you updated on the progress of your issue via email or your preferred communication method.</li>
+                            <li><strong>Confirmation:</strong> Once the issue is resolved, we will inform you and may ask you to confirm the fix.</li>
+                        </ol>
+                        <p>Our goal is to address all issues in a timely manner. Response times may vary depending on the volume of reports and the complexity of the issue.</p>
+                    </div>
+                </section>
+
+                <section id="types-of-issues" class="policy-section" aria-labelledby="types-of-issues-title">
+                    <h2 class="section-title" id="types-of-issues-title">
+                        <i class="fas fa-bug section-icon" aria-hidden="true"></i> Types of Issues to Report
+                    </h2>
+                    <div class="section-content">
+                        <p>Please report any of the following types of issues you encounter:</p>
+                        <ul>
+                            <li><strong>Technical Bugs:</strong> Website not loading, features not working, broken links, display errors.</li>
+                            <li><strong>Booking Errors:</strong> Incorrect ticket details, payment failures, issues with receiving confirmation.</li>
+                            <li><strong>Performance Problems:</strong> Slow loading times, unresponsiveness.</li>
+                            <li><strong>Content Inaccuracies:</strong> Outdated information, incorrect prices, missing details.</li>
+                            <li><strong>Security Concerns:</strong> Suspicious activity, potential vulnerabilities.</li>
+                            <li><strong>Accessibility Issues:</strong> Difficulties using the site with assistive technologies.</li>
+                            <li><strong>General Service Feedback:</strong> Anything that hinders your user experience.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="follow-up" class="policy-section" aria-labelledby="follow-up-title">
+                    <h2 class="section-title" id="follow-up-title">
+                        <i class="fas fa-comments section-icon" aria-hidden="true"></i> Follow-Up & Communication
+                    </h2>
+                    <div class="section-content">
+                        <p>After submitting your report, please refrain from submitting multiple reports for the same issue, as this can slow down our response time. If you need to provide additional information or follow up on an existing report, please reply to the original email or use the reference number provided in the acknowledgement.</p>
+                        <p>We appreciate your patience and cooperation as we work to resolve your reported issues.</p>
+                    </div>
+                </section>
+
+                <section id="policy-changes" class="policy-section" aria-labelledby="policy-changes-title">
+                    <h2 class="section-title" id="policy-changes-title">
+                        <i class="fas fa-redo-alt section-icon" aria-hidden="true"></i> Changes to This Policy
+                    </h2>
+                    <div class="section-content">
+                        <p>We may update this "Report an Issue" policy from time to time. Any changes will be effective immediately upon posting the updated policy on this page, along with an updated "Last updated" date. We encourage you to review this policy periodically.</p>
+                    </div>
+                </section>
+
+                <section id="contact-us" class="policy-section" aria-labelledby="contact-us-title">
+                    <h2 class="section-title" id="contact-us-title">
+                        <i class="fas fa-envelope section-icon" aria-hidden="true"></i> Contact Us
+                    </h2>
+                    <div class="section-content">
+                        <p>If you have any questions or require assistance regarding this "Report an Issue" policy, or to submit an issue, please contact us:</p>
+                        <ul>
+                            <li>By email: <a href="mailto:ajay@gmail.com">ajay@gmail.com</a></li>
+                            <li>By visiting our contact page: <a href="contact.php">SairKaro.com/contact</a></li>
+                            <li>By mail: Sair Karo, 123 Globe Trotter Lane, Koregaon Park, Pune, Maharashtra 411001, India</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+
+            <div class="call-to-action">
+                <p>Have an issue with a booking? <a href="my_bookings.php">View your bookings here</a>.</p>
+            </div>
+
+            <div class="return-to-top">
+                <a href="#top" class="scroll-to-top" aria-label="Return to top of page">
+                    <i class="fas fa-arrow-circle-up" aria-hidden="true"></i> Return to Top
+                </a>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="col-md-4 col-lg-4 mb-4 mb-md-0">
+                <h5>Sair Karo</h5>
+                <p>
+                    Sair Karo is your trusted partner for seamless travel bookings across India.
+                    We offer a convenient platform to book buses, trains, and flights with ease and confidence.
+                    Your journey, our priority.
+                </p>
+                <div class="social-links mt-3">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-lg-2 mb-4 mb-md-0">
+                <h5>Quick Links</h5>
+                <ul>
+                    <li><a href="home.php">Home</a></li>
+                    <li><a href="about.php">About Us</a></li>
+                    <li><a href="services.php">Services</a></li>
+                    <li><a href="contact.php">Contact Us</a></li>
+                    <li><a href="feedback.php">Feedback</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-4 col-lg-3 mb-4 mb-md-0">
+                <h5>Policies</h5>
+                <ul>
+                    <li><a href="privacy_policy.html">Privacy Policy</a></li>
+                    <li><a href="terms_conditions.html">Terms & Conditions</a></li>
+                    <li><a href="refund_policy.html">Cancellation & Refund</a></li>
+                    <li><a href="cookie_policy.html">Cookie Policy</a></li>
+                    <li><a href="report_issue.html">Report an Issue</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-4 col-lg-3">
+                <h5>Contact Info</h5>
+                <address>
+                    <p><i class="fas fa-map-marker-alt me-2"></i> 123 Travel Lane, Koregaon Park, Pune, Maharashtra 411001, India</p>
+                    <p><i class="fas fa-phone me-2"></i> +91 98765 43210</p>
+                    <p><i class="fas fa-envelope me-2"></i> ajay@gmail.com</p>
+                </address>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="copyright">
+                    &copy; 2025 Sair Karo. All Rights Reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Smooth scrolling for sidebar links
+            document.querySelectorAll('.sidebar-link').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    // Update active class for sidebar links
+                    document.querySelectorAll('.sidebar-link').forEach(link => {
+                        link.classList.remove('active');
+                    });
+                    this.classList.add('active');
+                    // Close sidebar on link click for mobile
+                    if (window.innerWidth <= 991) {
+                        document.getElementById('sidebar-nav').classList.remove('open');
+                        document.getElementById('sidebar-toggle').querySelector('.fa-bars').classList.add('active-icon');
+                        document.getElementById('sidebar-toggle').querySelector('.fa-times').classList.remove('active-icon');
+                    }
+                });
+            });
+
+            // Intersection Observer for scroll-based active sidebar link (optional, for larger screens)
+            const policySections = document.querySelectorAll('.policy-section');
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.5 // Highlight when 50% of the section is in view
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const id = entry.target.id;
+                        document.querySelectorAll('.sidebar-link').forEach(link => {
+                            link.classList.remove('active');
+                            if (link.getAttribute('href') === `#${id}`) {
+                                link.classList.add('active');
+                            }
+                        });
+                    }
+                });
+            }, observerOptions);
+
+            policySections.forEach(section => {
+                observer.observe(section);
+            });
+
+            // Toggle sidebar on mobile
+            const sidebarToggle = document.getElementById('sidebar-toggle');
+            const sidebarNav = document.getElementById('sidebar-nav');
+            const barsIcon = sidebarToggle.querySelector('.fa-bars');
+            const timesIcon = sidebarToggle.querySelector('.fa-times');
+
+            sidebarToggle.addEventListener('click', function () {
+                sidebarNav.classList.toggle('open');
+                barsIcon.classList.toggle('active-icon');
+                timesIcon.classList.toggle('active-icon');
+                this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'false' ? 'true' : 'false');
+            });
+
+            // Close sidebar if clicked outside (for mobile)
+            document.addEventListener('click', function(event) {
+                if (window.innerWidth <= 991 && !sidebarNav.contains(event.target) && !sidebarToggle.contains(event.target) && sidebarNav.classList.contains('open')) {
+                    sidebarNav.classList.remove('open');
+                    barsIcon.classList.add('active-icon');
+                    timesIcon.classList.remove('active-icon');
+                    sidebarToggle.setAttribute('aria-expanded', 'false');
+                }
+            });
+
+
+            // Search functionality
+            const policySearchInput = document.getElementById('policySearch');
+            const policyContent = document.getElementById('policyContent');
+            const originalContents = new Map(); // To store original content of sections
+
+            // Store original content on load
+            policySections.forEach(section => {
+                const sectionId = section.id;
+                const sectionContentElement = section.querySelector('.section-content');
+                if (sectionContentElement) {
+                    originalContents.set(sectionId, sectionContentElement.innerHTML);
+                }
+            });
+
+            policySearchInput.addEventListener('input', function() {
+                const searchTerm = policySearchInput.value.trim();
+
+                policySections.forEach(section => {
+                    const sectionId = section.id;
+                    const sectionContentElement = section.querySelector('.section-content');
+                    const originalSectionContent = originalContents.get(sectionId); // Get original content
+
+                    let sectionMatches = false;
+
+                    // Reset content before searching to remove previous highlights
+                    if (sectionContentElement && originalSectionContent) {
+                        sectionContentElement.innerHTML = originalSectionContent;
+                    }
+
+                    if (searchTerm === '') {
+                        section.style.display = 'block'; // Show all sections if search is empty
+                        return; // Exit early if no search term
+                    }
+
+                    // Perform search on the original content
+                    if (originalSectionContent && originalSectionContent.toLowerCase().includes(searchTerm.toLowerCase())) {
+                        sectionMatches = true;
+                        const regex = new RegExp(`(${searchTerm})`, 'gi');
+                        const highlightedContent = originalSectionContent.replace(regex, '<span class="highlight">$1</span>');
+
+                        if (highlightedContent !== originalSectionContent) {
+                            sectionContentElement.innerHTML = highlightedContent;
+                            sectionMatches = true;
+                        }
+                    }
+
+                    // Show or hide the section based on whether it contains the search term
+                    if (sectionMatches) {
+                        section.style.display = 'block';
+                    } else {
+                        section.style.display = 'none';
+                    }
+                });
+            });
+
+            // --- Initial Active Link State on Load ---
+            if (document.querySelectorAll('.sidebar-link').length > 0) {
+                const sidebarLinks = document.querySelectorAll('.sidebar-link');
+                if (!window.location.hash) {
+                    // If no hash, activate the first link and scroll to it
+                    sidebarLinks[0].classList.add('active');
+                    document.querySelector(sidebarLinks[0].getAttribute('href')).scrollIntoView({
+                        behavior: 'instant',
+                        block: 'start'
+                    });
+                } else {
+                    const hashLink = document.querySelector(`.sidebar-link[href="${window.location.hash}"]`);
+                    if (hashLink) {
+                        hashLink.classList.add('active');
+                        document.querySelector(window.location.hash).scrollIntoView({
+                            behavior: 'instant',
+                            block: 'start'
+                        });
+                    } else {
+                        // Fallback if hash doesn't match a link
+                        sidebarLinks[0].classList.add('active');
+                    }
+                }
+            }
+        });
+    </script>
+    </body>
+</html>

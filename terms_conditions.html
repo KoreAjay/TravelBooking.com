@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sair Karo's Terms and Conditions govern the use of our travel booking website and services.">
+    <title>Terms & Conditions - Sair Karo</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrpSgXJ6L/B6g0s2sU6N5uO/nC7Z1j4K4yI0+I/r9wz9L/Q1P/6r/j+8Xw0Q2f5uM3o2p/y9q2yq3t/8A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
+    <style>
+        /* Universal Box-sizing */
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+
+        :root {
+            /* Red-themed color palette (consistent with Home & Privacy Policy) */
+            --primary-red: #dc2626; /* Corresponds to Tailwind red-600 */
+            --secondary-red: #ef4444; /* Corresponds to Tailwind red-500 */
+            --light-red: #fef2f2; /* Corresponds to Tailwind red-50, for backgrounds */
+            --lighter-red: #fee2e2; /* Corresponds to Tailwind red-100, for hover states */
+            --dark-red: #b91c1c; /* Corresponds to Tailwind red-700, for darker text/headers */
+            --mid-red: #fca5a5; /* Corresponds to Tailwind red-300, for borders */
+            --gray-text: #4b5563; /* Tailwind gray-700 */
+            --light-gray: #f8fafc; /* Tailwind gray-50 */
+            --border-color: #e2e8f0; /* Tailwind slate-200 */
+            --highlight-yellow: #fcd34d; /* Tailwind yellow-300 */
+        }
+
+        /* Base Body Styles */
+        body {
+            font-family: 'Inter', sans-serif; /* Changed to Inter for consistency */
+            line-height: 1.7;
+            margin: 0;
+            padding: 0;
+            background-color: var(--light-gray); /* Changed to light-gray */
+            color: var(--gray-text); /* Changed to gray-text */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Skip to Content Link for Accessibility */
+        .skip-to-content-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--primary-red); /* Changed to primary-red */
+            color: white;
+            padding: 8px;
+            z-index: 1000;
+            transition: top 0.3s ease-in-out;
+        }
+        .skip-to-content-link:focus {
+            top: 0;
+        }
+
+        /* Header & Footer Styles (adjust to your actual designs) */
+        header {
+            background-color: var(--primary-red); /* Changed to primary-red */
+            color: white;
+            padding: 1.5rem 0; /* Tailwind p-4 md:p-6 */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1); /* Tailwind shadow-md */
+        }
+        header .logo a {
+            color: white;
+            font-size: 1.875rem; /* Tailwind text-3xl */
+            font-weight: 700; /* Tailwind font-bold */
+            letter-spacing: -0.025em; /* Tailwind tracking-tight */
+            padding: 0.25rem 0.5rem; /* Tailwind px-2 py-1 */
+            border-radius: 0.5rem; /* Tailwind rounded-lg */
+            transition: background-color 0.3s ease;
+            text-decoration: none; /* Ensure no underline */
+        }
+        header .logo a:hover {
+            background-color: var(--dark-red); /* Darker red on hover */
+        }
+        header nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 2rem; /* Tailwind space-x-8 */
+        }
+        header nav ul li a {
+            color: white;
+            font-size: 1.125rem; /* Tailwind text-lg */
+            border-radius: 0.5rem; /* Tailwind rounded-lg */
+            padding: 0.5rem 0.75rem; /* Tailwind px-3 py-2 */
+            transition: color 0.3s ease, background-color 0.3s ease;
+            text-decoration: none; /* No underline for navigation links */
+        }
+        header nav ul li a:hover {
+            color: var(--lighter-red); /* Lighter red on hover */
+            background-color: transparent; /* Ensure no background change unless active */
+        }
+        header nav ul li a[aria-current="page"] {
+            background-color: var(--dark-red); /* Darker red for active page */
+            font-weight: 600; /* Tailwind font-semibold */
+        }
+        header nav ul li a[aria-current="page"]:hover {
+            background-color: var(--primary-red); /* Primary red on hover for active */
+        }
+
+
+        footer {
+            background-color: #1f2937; /* Tailwind gray-800 */
+            color: white;
+            padding: 2rem 0; /* Tailwind py-8 */
+            margin-top: auto; /* Push footer to bottom */
+        }
+        footer .footer-content {
+            text-align: center;
+            padding-left: 1rem; /* Tailwind px-4 */
+            padding-right: 1rem;
+            max-width: 80rem; /* Tailwind max-w-7xl */
+            margin: 0 auto;
+        }
+        footer nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0 0 0; /* Tailwind mt-4 */
+            gap: 1rem; /* Tailwind space-x-4 */
+        }
+        footer nav a {
+            color: #9ca3af; /* Tailwind gray-400 */
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        footer nav a:hover {
+            color: white;
+        }
+        footer .social-links {
+            margin-top: 1.5rem; /* Tailwind mt-6 */
+            font-size: 1.5rem; /* Tailwind text-2xl */
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem; /* Tailwind space-x-6 */
+        }
+        footer .social-links a {
+            color: white;
+            transition: color 0.3s ease;
+        }
+        footer .social-links a:hover {
+            color: var(--secondary-red); /* Secondary red on hover for social icons */
+        }
+
+
+        /* Main Policy Container */
+        .policy-wrapper { /* Renamed for general use, same style */
+            display: flex;
+            flex-grow: 1;
+            max-width: 80rem; /* Tailwind max-w-7xl */
+            margin: 1.5rem auto; /* Tailwind my-6 mx-auto */
+            background-color: white;
+            border-radius: 0.5rem; /* Tailwind rounded-lg */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* Tailwind shadow-xl */
+            overflow: hidden;
+            flex-direction: column; /* Default for mobile */
+        }
+        @media (min-width: 1024px) { /* lg breakpoint */
+            .policy-wrapper {
+                flex-direction: row;
+            }
+        }
+
+
+        /* Sidebar Navigation */
+        .sidebar {
+            width: 100%;
+            flex-shrink: 0;
+            background-color: var(--light-red); /* Changed to light-red */
+            padding: 1.5rem 2rem; /* Tailwind p-6 lg:p-8 */
+            border-bottom: 1px solid var(--mid-red); /* Bottom border for mobile */
+            position: sticky;
+            top: 0;
+            align-self: flex-start;
+            height: auto;
+            overflow-y: auto;
+            display: flex; /* Ensure flex for header/nav toggle */
+            flex-direction: column;
+        }
+        @media (min-width: 1024px) { /* lg breakpoint */
+            .sidebar {
+                width: 18rem; /* Tailwind w-72 */
+                border-bottom: 0;
+                border-right: 1px solid var(--mid-red); /* Right border for desktop */
+                height: calc(100vh - 4rem); /* Adjust height for sticky behavior */
+            }
+        }
+
+        .sidebar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.25rem; /* Tailwind mb-5 */
+            padding-bottom: 1rem; /* Tailwind pb-4 */
+            border-bottom: 2px solid var(--primary-red); /* Changed to primary-red */
+        }
+        @media (min-width: 1024px) {
+            .sidebar-header {
+                border-bottom: 0;
+                margin-bottom: 0;
+                padding-bottom: 0;
+            }
+        }
+
+        .sidebar h2 {
+            color: var(--dark-red); /* Changed to dark-red */
+            font-size: 1.5rem; /* Tailwind text-2xl */
+            font-weight: 700; /* Tailwind font-bold */
+            margin: 0; /* Reset margin */
+            line-height: 1.2;
+        }
+
+        .sidebar-toggle {
+            display: none; /* Hidden by default, shown for mobile via media queries */
+            background: none;
+            border: none;
+            font-size: 1.875rem; /* Tailwind text-3xl */
+            cursor: pointer;
+            color: var(--primary-red); /* Changed to primary-red */
+            padding: 0.25rem; /* Tailwind p-1 */
+            border-radius: 0.375rem; /* Tailwind rounded-md */
+            transition: background-color 0.2s ease;
+        }
+        .sidebar-toggle:hover {
+            background-color: var(--lighter-red); /* Changed to lighter-red */
+        }
+
+        /* Custom modal styles for sidebar toggle icons */
+        .sidebar-toggle .fa-times {
+            display: none;
+        }
+        .sidebar-toggle.active .fa-bars {
+            display: none;
+        }
+        .sidebar-toggle.active .fa-times {
+            display: inline-block;
+        }
+
+        .sidebar nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            max-height: 0; /* Controlled by JS */
+            overflow: hidden;
+            transition: max-height 0.4s ease-out;
+        }
+
+        .sidebar nav ul.open {
+            max-height: fit-content; /* Set by JS */
+            border-top: 1px solid var(--lighter-red); /* Changed to lighter-red */
+            padding-top: 1rem;
+            margin-top: 1rem;
+        }
+        @media (min-width: 1024px) { /* lg breakpoint */
+            .sidebar nav ul {
+                max-height: initial !important; /* Override JS for desktop */
+                padding-top: 0 !important;
+                margin-top: 0 !important;
+                border-top: 0 !important;
+            }
+        }
+
+        .sidebar nav ul li {
+            margin-bottom: 0.5rem; /* Tailwind mb-2 */
+        }
+
+        .sidebar nav ul li a {
+            text-decoration: none;
+            color: var(--gray-text); /* Changed to gray-text */
+            font-weight: 500; /* Tailwind font-medium */
+            display: flex;
+            align-items: center;
+            padding: 0.75rem; /* Tailwind p-3 */
+            border-radius: 0.375rem; /* Tailwind rounded-md */
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            font-size: 1rem; /* Tailwind text-base */
+        }
+
+        .sidebar nav ul li a:hover,
+        .sidebar nav ul li a.active {
+            background-color: var(--primary-red); /* Changed to primary-red */
+            color: white;
+            transform: translateX(4px); /* Tailwind translate-x-1 */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.05); /* Tailwind shadow-md */
+        }
+
+        .sidebar-icon {
+            margin-right: 0.75rem; /* Tailwind mr-3 */
+            font-size: 1.125rem; /* Tailwind text-lg */
+            color: var(--secondary-red); /* Changed to secondary-red */
+            transition: color 0.3s ease;
+        }
+
+        .sidebar nav ul li a.active .sidebar-icon,
+        .sidebar nav ul li a:hover .sidebar-icon { /* Also applies to hover */
+            color: white;
+        }
+
+        /* Main Content Area */
+        .content {
+            flex: 1;
+            padding: 1.5rem 2rem; /* Tailwind p-6 md:p-8 lg:p-10 */
+            position: relative;
+        }
+
+        .policy-heading {
+            color: var(--dark-red); /* Changed to dark-red */
+            font-size: 2.25rem; /* Tailwind text-3xl */
+            font-weight: 800; /* Tailwind font-extrabold */
+            margin-top: 0;
+            margin-bottom: 0.75rem; /* Tailwind mb-3 */
+            padding-bottom: 1rem; /* Tailwind pb-4 */
+            border-bottom: 4px solid var(--primary-red); /* Changed to primary-red */
+            filter: drop-shadow(0 1px 1px rgba(0,0,0,0.05)); /* Tailwind drop-shadow-sm */
+        }
+        @media (min-width: 768px) {
+            .policy-heading {
+                font-size: 2.25rem; /* md:text-4xl */
+            }
+        }
+        @media (min-width: 1024px) {
+            .policy-heading {
+                font-size: 3rem; /* lg:text-5xl */
+            }
+        }
+
+        .last-updated {
+            font-style: italic;
+            color: var(--gray-text); /* Changed to gray-text */
+            margin-bottom: 1.5rem; /* Tailwind mb-6 */
+            font-size: 0.875rem; /* Tailwind text-sm */
+        }
+        @media (min-width: 768px) {
+            .last-updated {
+                font-size: 1rem; /* md:text-base */
+            }
+        }
+
+        /* Search Bar */
+        .search-box {
+            position: relative;
+            margin-bottom: 2rem; /* Tailwind mb-8 */
+        }
+
+        .search-box input[type="text"] {
+            width: 100%;
+            padding: 0.75rem 1rem 0.75rem 3rem; /* Tailwind pl-12 pr-4 py-3 */
+            border: 1px solid var(--border-color); /* Tailwind border-gray-300 */
+            border-radius: 9999px; /* Tailwind rounded-full */
+            font-size: 1rem; /* Tailwind text-base */
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); /* Tailwind shadow-sm */
+            transition: all 0.2s ease;
+            color: var(--gray-text); /* Changed to gray-text */
+        }
+
+        .search-box input[type="text"]::placeholder {
+            color: #6b7280; /* Tailwind gray-500 */
+        }
+
+        .search-box input[type="text"]:focus {
+            outline: none;
+            border-color: var(--secondary-red); /* Changed to secondary-red */
+            box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.3); /* Red 500 with opacity for ring */
+        }
+
+        .search-box .search-icon {
+            position: absolute;
+            left: 1rem; /* Tailwind left-4 */
+            top: 50%;
+            transform: translateY(-50%);
+            color: #6b7280; /* Tailwind gray-500 */
+            font-size: 1.125rem; /* Tailwind text-lg */
+        }
+
+        /* Policy Sections */
+        .policy-section {
+            margin-bottom: 2.5rem; /* Tailwind mb-10 */
+            padding-bottom: 1.5rem; /* Tailwind pb-6 */
+            border-bottom: 1px dashed #d1d5db; /* Tailwind border-dashed border-gray-300 */
+        }
+
+        .policy-section:last-child {
+            border-bottom: none;
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            color: var(--dark-red); /* Changed to dark-red */
+            font-size: 1.5rem; /* Tailwind text-2xl */
+            font-weight: 700; /* Tailwind font-bold */
+            margin-bottom: 1.25rem; /* Tailwind mb-5 */
+            position: relative;
+            padding-left: 2.25rem; /* Tailwind pl-9 */
+            line-height: 1.375; /* Tailwind leading-tight */
+        }
+        @media (min-width: 768px) {
+            .section-title {
+                font-size: 1.875rem; /* md:text-3xl */
+            }
+        }
+
+        .section-icon {
+            position: absolute;
+            left: 0;
+            top: 0.25rem; /* Tailwind top-1 */
+            color: var(--primary-red); /* Changed to primary-red */
+            font-size: 1.25rem; /* Tailwind text-xl */
+        }
+
+        .section-content {
+            font-size: 1rem; /* Tailwind text-base */
+            color: var(--gray-text); /* Changed to gray-text */
+            line-height: 1.625; /* Tailwind leading-relaxed */
+        }
+        .section-content h3 {
+            color: var(--primary-red); /* Changed to primary-red */
+            font-size: 1.25rem; /* Tailwind text-xl */
+            font-weight: 600; /* Tailwind font-semibold */
+            margin-top: 1.5rem; /* Tailwind mt-6 */
+            margin-bottom: 0.75rem; /* Tailwind mb-3 */
+        }
+        @media (min-width: 768px) {
+            .section-content h3 {
+                font-size: 1.5rem; /* md:text-2xl */
+            }
+        }
+
+        .section-content ul {
+            list-style: disc;
+            margin-left: 1.5rem; /* Tailwind ml-6 */
+            padding: 0;
+            line-height: 1.75rem; /* Tailwind leading-loose */
+        }
+        @media (min-width: 768px) {
+            .section-content ul {
+                margin-left: 2rem; /* md:ml-8 */
+            }
+        }
+        .section-content ul li {
+            margin-bottom: 0.5rem; /* Tailwind mb-2 */
+        }
+        .section-content strong {
+            color: var(--dark-red); /* Changed to dark-red for strong text */
+        }
+        .section-content a {
+            color: var(--primary-red); /* Changed to primary-red */
+            text-decoration: none;
+            transition: text-decoration 0.2s ease;
+        }
+        .section-content a:hover {
+            text-decoration: underline;
+        }
+
+        /* Highlighted search results */
+        .highlight {
+            background-color: var(--highlight-yellow); /* Retained yellow for highlight */
+            padding: 0 0.125rem; /* Tailwind px-1 */
+            border-radius: 0.125rem; /* Tailwind rounded-sm */
+            font-weight: 600; /* Tailwind font-semibold */
+            color: #1f2937; /* Tailwind gray-900 */
+        }
+
+        /* Call to action */
+        .call-to-action {
+            background-color: var(--lighter-red); /* Changed to lighter-red */
+            padding: 1.25rem; /* Tailwind p-5 */
+            border-radius: 0.5rem; /* Tailwind rounded-lg */
+            text-align: center;
+            margin-top: 2.5rem; /* Tailwind mt-10 */
+            border: 1px solid var(--mid-red); /* Changed to mid-red */
+        }
+        .call-to-action p {
+            margin: 0;
+            font-size: 1.125rem; /* Tailwind text-lg */
+            color: var(--dark-red); /* Changed to dark-red */
+        }
+        .call-to-action a {
+            color: var(--primary-red); /* Changed to primary-red */
+            font-weight: 700; /* Tailwind font-bold */
+            text-decoration: none;
+        }
+        .call-to-action a:hover {
+            text-decoration: underline;
+        }
+
+        /* Return to Top Button */
+        .return-to-top {
+            text-align: center;
+            margin-top: 3rem; /* Tailwind mt-12 */
+        }
+
+        .scroll-to-top {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.75rem 1.5rem; /* Tailwind px-6 py-3 */
+            background-color: var(--primary-red); /* Changed to primary-red */
+            color: #fff;
+            text-decoration: none;
+            border-radius: 9999px; /* Tailwind rounded-full */
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            font-weight: 700; /* Tailwind font-bold */
+            font-size: 1.125rem; /* Tailwind text-lg */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.05); /* Tailwind shadow-md */
+        }
+
+        .scroll-to-top:hover {
+            background-color: var(--dark-red); /* Changed to dark-red */
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* Tailwind hover:shadow-lg */
+        }
+
+        .scroll-to-top i {
+            margin-right: 0.75rem; /* Tailwind mr-3 */
+            font-size: 1.25rem; /* Tailwind text-xl */
+        }
+
+        /* --- Responsive Design Media Queries --- */
+
+        /* For screens smaller than 1024px (lg breakpoint and below) */
+        @media (max-width: 1023px) {
+            .policy-wrapper {
+                margin: 1rem; /* Tailwind m-4 */
+                border-radius: 0.5rem; /* Tailwind rounded-lg */
+                box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            }
+
+            .sidebar {
+                position: relative;
+                height: auto;
+                border-right: none;
+                border-bottom: 1px solid var(--border-color); /* Changed to border-color */
+                padding: 1.25rem; /* Tailwind p-5 */
+                box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+                overflow-y: hidden;
+            }
+
+            .sidebar-header {
+                border-bottom: none;
+                margin-bottom: 0;
+                padding-bottom: 0;
+            }
+
+            .sidebar h2 {
+                font-size: 1.4rem;
+            }
+
+            .sidebar-toggle {
+                display: block;
+            }
+
+            .content {
+                padding: 1.5rem; /* Tailwind p-6 */
+            }
+
+            .policy-heading {
+                font-size: 2rem;
+            }
+
+            .section-title {
+                font-size: 1.75rem;
+                padding-left: 2rem;
+            }
+
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 1rem; /* Tailwind p-4 */
+            }
+            header nav {
+                width: 100%;
+                margin-top: 0.5rem; /* Tailwind mt-2 */
+            }
+            header nav ul {
+                flex-direction: column;
+                width: 100%;
+                margin-top: 0.5rem; /* Tailwind mt-2 */
+                display: none; /* Hidden by default for mobile nav */
+            }
+            header nav ul.mobile-menu-open { /* Class toggled by JS */
+                display: flex;
+            }
+            header nav ul li {
+                margin: 0.25rem 0; /* Tailwind my-1 */
+                width: 100%;
+            }
+            header nav ul li a {
+                padding: 0.5rem 0.75rem; /* Tailwind px-3 py-2 */
+                background-color: rgba(255,255,255,0.1);
+                border-radius: 0.375rem; /* Tailwind rounded-md */
+            }
+        }
+
+        /* For screens smaller than 768px (md breakpoint and below) */
+        @media (max-width: 767px) {
+            .policy-heading {
+                font-size: 1.8rem;
+                padding-bottom: 0.75rem;
+            }
+
+            .last-updated {
+                margin-bottom: 1.25rem;
+            }
+
+            .search-box input[type="text"] {
+                padding: 0.625rem 0.75rem 0.625rem 2.5rem; /* Adjusted padding */
+                font-size: 0.9rem;
+            }
+            .search-box .search-icon {
+                left: 0.75rem;
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+                padding-left: 1.75rem;
+            }
+
+            .section-icon {
+                font-size: 0.8rem;
+                top: 0.1875rem;
+            }
+
+            .section-content {
+                font-size: 0.95rem;
+            }
+
+            .return-to-top {
+                margin-top: 2rem;
+            }
+            .scroll-to-top {
+                padding: 0.625rem 1.25rem;
+                font-size: 0.9rem;
+            }
+            .scroll-to-top i {
+                margin-right: 0.5rem;
+                font-size: 1.1rem;
+            }
+        }
+
+        /* For very small screens / mobile portrait */
+        @media (max-width: 480px) {
+            .policy-wrapper {
+                margin: 0.5rem; /* Tailwind m-2 */
+                border-radius: 0.25rem; /* Tailwind rounded-sm */
+            }
+
+            .sidebar {
+                padding: 1rem; /* Tailwind p-4 */
+            }
+
+            .sidebar nav ul.open {
+                max-height: 25rem; /* Sufficient for smaller screens */
+            }
+
+            .content {
+                padding: 1rem; /* Tailwind p-4 */
+            }
+
+            .policy-heading {
+                font-size: 1.25rem;
+            }
+
+            .section-title {
+                font-size: 1rem;
+                padding-left: 1.5rem;
+            }
+            .section-icon {
+                font-size: 0.7rem;
+                top: 0.125rem;
+            }
+            .section-content ul {
+                margin-left: 1rem;
+            }
+
+            .call-to-action {
+                padding: 1rem;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+    </head>
+<body>
+
+    <header>
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-start md:items-center">
+            <div class="logo mb-4 md:mb-0">
+                <a href="home.php">Sair Karo</a>
+            </div>
+            <nav aria-label="Main Navigation">
+                <ul>
+                    <li><a href="home.php">Home</a></li>
+                    
+                    <li><a href="contact.php">Contact Us</a></li>
+                    <li><a href="privacy_policy.html">Privacy Policy</a></li>
+                    <li><a href="/terms_conditions.html" aria-current="page">Terms & Conditions</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <a href="#main-content" class="skip-to-content-link">Skip to main content</a>
+
+    <div class="policy-wrapper" role="document">
+        <aside class="sidebar" aria-label="Terms and Conditions Navigation" id="sidebar">
+            <div class="sidebar-header">
+                <h2>Sections</h2>
+                <button class="sidebar-toggle" id="sidebar-toggle" aria-expanded="false" aria-controls="sidebar-nav">
+                    <i class="fas fa-bars"></i>
+                    <i class="fas fa-times"></i>
+                    <span class="sr-only">Toggle navigation</span>
+                </button>
+            </div>
+            <nav id="sidebar-nav" aria-label="Terms and Conditions Sections">
+                <ul>
+                    <li>
+                        <a href="#introduction" class="sidebar-link">
+                            <i class="fas fa-file-contract sidebar-icon" aria-hidden="true"></i> Introduction
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#acceptance-of-terms" class="sidebar-link">
+                            <i class="fas fa-check-double sidebar-icon" aria-hidden="true"></i> Acceptance of Terms
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#user-accounts" class="sidebar-link">
+                            <i class="fas fa-user-circle sidebar-icon" aria-hidden="true"></i> User Accounts
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#booking-conditions" class="sidebar-link">
+                            <i class="fas fa-plane-departure sidebar-icon" aria-hidden="true"></i> Booking Conditions
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#payments-cancellations" class="sidebar-link">
+                            <i class="fas fa-credit-card sidebar-icon" aria-hidden="true"></i> Payments & Cancellations
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#intellectual-property" class="sidebar-link">
+                            <i class="fas fa-lightbulb sidebar-icon" aria-hidden="true"></i> Intellectual Property
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#prohibited-uses" class="sidebar-link">
+                            <i class="fas fa-ban sidebar-icon" aria-hidden="true"></i> Prohibited Uses
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#disclaimer-of-warranties" class="sidebar-link">
+                            <i class="fas fa-exclamation-triangle sidebar-icon" aria-hidden="true"></i> Disclaimer of Warranties
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#limitation-of-liability" class="sidebar-link">
+                            <i class="fas fa-gavel sidebar-icon" aria-hidden="true"></i> Limitation of Liability
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#governing-law" class="sidebar-link">
+                            <i class="fas fa-balance-scale sidebar-icon" aria-hidden="true"></i> Governing Law
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#changes-to-terms" class="sidebar-link">
+                            <i class="fas fa-sync-alt sidebar-icon" aria-hidden="true"></i> Changes to Terms
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#contact-us" class="sidebar-link">
+                            <i class="fas fa-envelope sidebar-icon" aria-hidden="true"></i> Contact Us
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="content" id="main-content">
+            <h1 class="policy-heading">Terms & Conditions for Sair Karo</h1>
+            <p class="last-updated">Last updated: <time datetime="2025-06-23">June 23, 2025</time></p>
+
+            <div class="search-box">
+                <label for="policySearch" class="sr-only">Search Terms & Conditions</label>
+                <input type="text" id="policySearch" placeholder="Search terms..." aria-label="Search Terms and Conditions">
+                <i class="fas fa-search search-icon" aria-hidden="true"></i>
+            </div>
+
+            <div id="policyContent">
+                <section id="introduction" class="policy-section" aria-labelledby="introduction-title">
+                    <h2 class="section-title" id="introduction-title">
+                        <i class="fas fa-file-contract section-icon" aria-hidden="true"></i> Introduction
+                    </h2>
+                    <div class="section-content">
+                        <p>Welcome to Sair Karo! These Terms and Conditions ("Terms") govern your access to and use of the Sair Karo website and services ("Service"). By accessing or using our Service, you agree to be bound by these Terms and our Privacy Policy. If you disagree with any part of the terms, then you may not access the Service.</p>
+                        <p>Sair Karo provides an online platform for booking bus, train, and flight tickets, and other related travel services.</p>
+                    </div>
+                </section>
+
+                <section id="acceptance-of-terms" class="policy-section" aria-labelledby="acceptance-of-terms-title">
+                    <h2 class="section-title" id="acceptance-of-terms-title">
+                        <i class="fas fa-check-double section-icon" aria-hidden="true"></i> Acceptance of Terms
+                    </h2>
+                    <div class="section-content">
+                        <p>By using the Service, you confirm that you are at least 18 years of age and that you have read, understood, and agree to be bound by these Terms, as they may be amended from time to time. If you are using the Service on behalf of an organization, you are agreeing to these Terms for that organization and warrant that you have the authority to bind that organization to these Terms.</p>
+                    </div>
+                </section>
+
+                <section id="user-accounts" class="policy-section" aria-labelledby="user-accounts-title">
+                    <h2 class="section-title" id="user-accounts-title">
+                        <i class="fas fa-user-circle section-icon" aria-hidden="true"></i> User Accounts
+                    </h2>
+                    <div class="section-content">
+                        <p>When you create an account with us, you guarantee that you are above the age of 18, and that the information you provide us is accurate, complete, and current at all times. Inaccurate, incomplete, or obsolete information may result in the immediate termination of your account on the Service.</p>
+                        <ul>
+                            <li>You are responsible for maintaining the confidentiality of your account and password, including but not limited to the restriction of access to your computer and/or account.</li>
+                            <li>You agree to accept responsibility for any and all activities or actions that occur under your account and/or password.</li>
+                            <li>You must notify us immediately upon becoming aware of any breach of security or unauthorized use of your account.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="booking-conditions" class="policy-section" aria-labelledby="booking-conditions-title">
+                    <h2 class="section-title" id="booking-conditions-title">
+                        <i class="fas fa-plane-departure section-icon" aria-hidden="true"></i> Booking Conditions
+                    </h2>
+                    <div class="section-content">
+                        <p>Sair Karo acts as an intermediary for travel services. We do not own, operate, or manage any transport services (buses, trains, flights) or accommodations. Our responsibility is limited to facilitating the booking process.</p>
+                        <ul>
+                            <li><strong>Accuracy of Information:</strong> You are responsible for providing accurate and complete information (names, dates, passport details, etc.) required for booking. Sair Karo is not liable for issues arising from incorrect information provided by you.</li>
+                            <li><strong>Supplier Terms:</strong> All bookings are subject to the terms and conditions of the respective airline, bus operator, railway, or hotel. These terms may include cancellation policies, baggage allowances, and check-in procedures.</li>
+                            <li><strong>Availability:</strong> All bookings are subject to availability. While we strive to show real-time availability, external factors may affect final confirmation.</li>
+                            <li><strong>Pricing:</strong> Prices displayed are subject to change without notice until the booking is confirmed and paid for.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="payments-cancellations" class="policy-section" aria-labelledby="payments-cancellations-title">
+                    <h2 class="section-title" id="payments-cancellations-title">
+                        <i class="fas fa-credit-card section-icon" aria-hidden="true"></i> Payments & Cancellations
+                    </h2>
+                    <div class="section-content">
+                        <p>Payments for all services must be made through the methods available on our platform. All transactions are processed securely.</p>
+                        <ul>
+                            <li><strong>Payment Confirmation:</strong> Your booking is confirmed only after successful payment and receipt of a confirmation email from Sair Karo.</li>
+                            <li><strong>Cancellation Policy:</strong> Cancellation and refund policies are determined by the individual travel service provider (airline, bus company, hotel). You must review these policies before making a booking. Sair Karo will assist in processing cancellations based on the provider's terms.</li>
+                            <li><strong>Refunds:</strong> Refunds, if applicable, will be processed according to the travel provider's and our own refund policies. Processing times may vary.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="intellectual-property" class="policy-section" aria-labelledby="intellectual-property-title">
+                    <h2 class="section-title" id="intellectual-property-title">
+                        <i class="fas fa-lightbulb section-icon" aria-hidden="true"></i> Intellectual Property
+                    </h2>
+                    <div class="section-content">
+                        <p>The Service and its original content (excluding content provided by users), features and functionality are and will remain the exclusive property of Sair Karo and its licensors. The Service is protected by copyright, trademark, and other laws of both the country and foreign countries. Our trademarks and trade dress may not be used in connection with any product or service without the prior written consent of Sair Karo.</p>
+                    </div>
+                </section>
+
+                <section id="prohibited-uses" class="policy-section" aria-labelledby="prohibited-uses-title">
+                    <h2 class="section-title" id="prohibited-uses-title">
+                        <i class="fas fa-ban section-icon" aria-hidden="true"></i> Prohibited Uses
+                    </h2>
+                    <div class="section-content">
+                        <p>You may use the Service only for lawful purposes and in accordance with the Terms. You agree not to use the Service:</p>
+                        <ul>
+                            <li>In any way that violates any applicable national or international law or regulation.</li>
+                            <li>For the purpose of exploiting, harming, or attempting to exploit or harm minors in any way by exposing them to inappropriate content or otherwise.</li>
+                            <li>To transmit, or procure the sending of, any advertising or promotional material, including any "junk mail", "chain letter," "spam," or any other similar solicitation.</li>
+                            <li>To impersonate or attempt to impersonate Sair Karo, a Sair Karo employee, another user, or any other person or entity.</li>
+                            <li>To engage in any other conduct that restricts or inhibits anyone's use or enjoyment of the Service, or which, as determined by us, may harm or offend Sair Karo or users of the Service or expose them to liability.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="disclaimer-of-warranties" class="policy-section" aria-labelledby="disclaimer-of-warranties-title">
+                    <h2 class="section-title" id="disclaimer-of-warranties-title">
+                        <i class="fas fa-exclamation-triangle section-icon" aria-hidden="true"></i> Disclaimer of Warranties
+                    </h2>
+                    <div class="section-content">
+                        <p>Your use of the Service is at your sole risk. The Service is provided on an "AS IS" and "AS AVAILABLE" basis. The Service is provided without warranties of any kind, whether express or implied, including, but not limited to, implied warranties of merchantability, fitness for a particular purpose, non-infringement or course of performance.</p>
+                        <p>Sair Karo does not warrant that a) the Service will function uninterrupted, secure or available at any particular time or location; b) any errors or defects will be corrected; c) the Service is free of viruses or other harmful components; or d) the results of using the Service will meet your requirements.</p>
+                    </div>
+                </section>
+
+                <section id="limitation-of-liability" class="policy-section" aria-labelledby="limitation-of-liability-title">
+                    <h2 class="section-title" id="limitation-of-liability-title">
+                        <i class="fas fa-gavel section-icon" aria-hidden="true"></i> Limitation of Liability
+                    </h2>
+                    <div class="section-content">
+                        <p>In no event shall Sair Karo, nor its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from (i) your access to or use of or inability to access or use the Service; (ii) any conduct or content of any third party on the Service; (iii) any content obtained from the Service; and (iv) unauthorized access, use or alteration of your transmissions or content, whether based on warranty, contract, tort (including negligence) or any other legal theory, whether or not we have been informed of the possibility of such damage, and even if a remedy set forth herein is found to have failed of its essential purpose.</p>
+                    </div>
+                </section>
+
+                <section id="governing-law" class="policy-section" aria-labelledby="governing-law-title">
+                    <h2 class="section-title" id="governing-law-title">
+                        <i class="fas fa-balance-scale section-icon" aria-hidden="true"></i> Governing Law
+                    </h2>
+                    <div class="section-content">
+                        <p>These Terms shall be governed and construed in accordance with the laws of [Your Country/State], without regard to its conflict of law provisions.</p>
+                        <p>Our failure to enforce any right or provision of these Terms will not be considered a waiver of those rights. If any provision of these Terms is held to be invalid or unenforceable by a court, the remaining provisions of these Terms will remain in effect. These Terms constitute the entire agreement between us regarding our Service, and supersede and replace any prior agreements we might have had between us regarding the Service.</p>
+                    </div>
+                </section>
+
+                <section id="changes-to-terms" class="policy-section" aria-labelledby="changes-to-terms-title">
+                    <h2 class="section-title" id="changes-to-terms-title">
+                        <i class="fas fa-sync-alt section-icon" aria-hidden="true"></i> Changes to Terms
+                    </h2>
+                    <div class="section-content">
+                        <p>We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material we will provide at least 30 days notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion.</p>
+                        <p>By continuing to access or use our Service after any revisions become effective, you agree to be bound by the revised terms. If you do not agree to the new terms, you are no longer authorized to use the Service.</p>
+                    </div>
+                </section>
+
+                <section id="contact-us" class="policy-section" aria-labelledby="contact-us-title">
+                    <h2 class="section-title" id="contact-us-title">
+                        <i class="fas fa-envelope section-icon" aria-hidden="true"></i> Contact Us
+                    </h2>
+                    <div class="section-content">
+                        <p>If you have any questions about these Terms, please contact us:</p>
+                        <ul>
+                            <li>By email: <a href="mailto:ajay@gmail.com">ajay@gmail.com</a></li>
+                            <li>By visiting our contact page: <a href="contact.php">contact.php</a></li>
+                            <li>By mail: Sair Karo, 123 Globe Trotter Lane, Adventurville, CA 90210, USA</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+
+            <div class="call-to-action">
+                <p>Start your journey with confidence! <a href="home.php">Visit Sair Karo Home</a></p>
+            </div>
+
+            <div class="return-to-top">
+                <a href="#top" class="scroll-to-top" aria-label="Return to top of page">
+                    <i class="fas fa-arrow-circle-up" aria-hidden="true"></i> Return to Top
+                </a>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Sair Karo. All rights reserved.</p>
+            <nav aria-label="Footer Navigation">
+                <ul>
+                    <li><a href="/terms_conditions.html">Terms & Conditions</a></li>
+                    <li><a href="/privacy_policy.html">Privacy Policy</a></li>
+                    <li><a href="/faq.html">FAQ</a></li>
+                </ul>
+            </nav>
+            <div class="social-links">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const sidebarToggle = document.getElementById('sidebar-toggle');
+            const sidebarNav = document.getElementById('sidebar-nav');
+            const sidebarLinks = document.querySelectorAll('.sidebar-link');
+            const policySections = document.querySelectorAll('.policy-section');
+            const policySearchInput = document.getElementById('policySearch');
+            let originalContent = {}; // To store original HTML for search reset
+
+            // Store original content of each section for highlighting/reset
+            policySections.forEach(section => {
+                originalContent[section.id] = section.querySelector('.section-content').innerHTML;
+            });
+
+            // --- Mobile Sidebar Toggle ---
+            if (sidebarToggle && sidebarNav) {
+                sidebarToggle.addEventListener('click', function() {
+                    const isExpanded = this.getAttribute('aria-expanded') === 'true';
+                    this.setAttribute('aria-expanded', !isExpanded);
+                    sidebarNav.classList.toggle('open'); // This will control max-height
+                    this.classList.toggle('active'); // Toggle class for icon change
+                    if (sidebarNav.classList.contains('open')) {
+                        sidebarNav.style.maxHeight = sidebarNav.scrollHeight + "px";
+                    } else {
+                        sidebarNav.style.maxHeight = "0";
+                    }
+                });
+            }
+
+            // --- Smooth Scrolling & Active Link Highlighting ---
+            sidebarLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault(); // Prevent default jump
+
+                    const targetId = this.getAttribute('href');
+                    const targetSection = document.querySelector(targetId);
+
+                    if (targetSection) {
+                        // Scroll smoothly to the target section
+                        targetSection.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start' // Scroll to the top of the section
+                        });
+
+                        // Update active class immediately for visual feedback
+                        sidebarLinks.forEach(innerLink => {
+                            innerLink.classList.remove('active');
+                        });
+                        this.classList.add('active');
+
+
+                        // Close sidebar on mobile after clicking a link
+                        if (window.innerWidth <= 1023 && sidebarNav.classList.contains('open')) { // 1023px is lg breakpoint
+                            sidebarToggle.click(); // Programmatically click the toggle button
+                        }
+                    }
+                });
+            });
+
+            // Intersection Observer for highlighting sidebar links on scroll
+            const observerOptions = {
+                root: null, // relative to the viewport
+                rootMargin: '0px',
+                threshold: 0.3 // Section is active when 30% visible (adjust as needed)
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const id = entry.target.id;
+                        sidebarLinks.forEach(link => {
+                            link.classList.remove('active'); // Remove active from all
+                            if (link.getAttribute('href') === `#${id}`) {
+                                link.classList.add('active'); // Add active to the current section's link
+                            }
+                        });
+                    }
+                });
+            }, observerOptions);
+
+            // Observe each policy section
+            policySections.forEach(section => {
+                observer.observe(section);
+            });
+
+            // --- Search Functionality ---
+            policySearchInput.addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase().trim();
+
+                policySections.forEach(section => {
+                    const sectionContentElement = section.querySelector('.section-content');
+                    const sectionTitleElement = section.querySelector('.section-title');
+                    const originalSectionContent = originalContent[section.id]; // Get original HTML
+
+                    // Reset content to its original state (remove previous highlights)
+                    sectionContentElement.innerHTML = originalSectionContent;
+
+                    let sectionMatches = false;
+
+                    if (searchTerm === '') {
+                        section.style.display = 'block'; // Show all sections
+                        return; // Exit early if search term is empty
+                    }
+
+                    // Check if section title matches
+                    if (sectionTitleElement.textContent.toLowerCase().includes(searchTerm)) {
+                        sectionMatches = true;
+                    }
+
+                    // Highlight and check if section content matches
+                    const regex = new RegExp(`(${searchTerm})`, 'gi');
+                    const highlightedContent = originalSectionContent.replace(regex, '<span class="highlight">$1</span>');
+
+                    if (highlightedContent !== originalSectionContent) {
+                        sectionContentElement.innerHTML = highlightedContent;
+                        sectionMatches = true;
+                    }
+
+                    // Show or hide the section based on whether it contains the search term
+                    if (sectionMatches) {
+                        section.style.display = 'block';
+                    } else {
+                        section.style.display = 'none';
+                    }
+                });
+            });
+
+            // --- Initial Active Link State on Load ---
+            if (sidebarLinks.length > 0) {
+                if (!window.location.hash) {
+                    sidebarLinks[0].classList.add('active');
+                } else {
+                    const hashLink = document.querySelector(`.sidebar-link[href="${window.location.hash}"]`);
+                    if (hashLink) {
+                        hashLink.classList.add('active');
+                        document.querySelector(window.location.hash).scrollIntoView({
+                            behavior: 'instant',
+                            block: 'start'
+                        });
+                    } else {
+                        sidebarLinks[0].classList.add('active');
+                    }
+                }
+            }
+        });
+    </script>
+    </body>
+</html>

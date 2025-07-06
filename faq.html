@@ -1,0 +1,1141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Frequently Asked Questions about Sair Karo's travel booking services.">
+    <title>FAQs - Sair Karo</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrpSgXJ6L/B6g0s2sU6N5uO/nC7Z1j4K4yI0+I/r9wz9L/Q1P/6r/j+8Xw0Q2f5uM3o2p/y9q2yq3t/8A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Universal Box-sizing */
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+
+        :root {
+            /* Red-themed color palette (consistent with Home & Privacy Policy) */
+            --primary-red: #dc2626; /* Corresponds to Tailwind red-600 */
+            --secondary-red: #ef4444; /* Corresponds to Tailwind red-500 */
+            --light-red: #fef2f2; /* Corresponds to Tailwind red-50, for backgrounds */
+            --lighter-red: #fee2e2; /* Corresponds to Tailwind red-100, for hover states */
+            --dark-red: #b91c1c; /* Corresponds to Tailwind red-700, for darker text/headers */
+            --mid-red: #fca5a5; /* Corresponds to Tailwind red-300, for borders */
+            --gray-text: #4b5563; /* Tailwind gray-700 */
+            --light-gray: #f8fafc; /* Tailwind gray-50 */
+            --border-color: #e2e8f0; /* Tailwind slate-200 */
+            --highlight-yellow: #fcd34d; /* Tailwind yellow-300 */
+        }
+
+        /* Base Body Styles */
+        body {
+            font-family: 'Inter', sans-serif; /* Changed to Inter */
+            line-height: 1.7;
+            margin: 0;
+            padding: 0;
+            background-color: var(--light-gray);
+            color: var(--gray-text);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Skip to Content Link for Accessibility */
+        .skip-to-content-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--primary-red);
+            color: white;
+            padding: 8px;
+            z-index: 1000;
+            transition: top 0.3s ease-in-out;
+        }
+        .skip-to-content-link:focus {
+            top: 0;
+        }
+
+        /* Header & Footer Styles */
+        header {
+            background-color: var(--primary-red);
+            color: white;
+            padding: 1.5rem 0;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+        }
+        header .container {
+            max-width: 80rem; /* Tailwind max-w-7xl */
+            margin: 0 auto;
+            padding-left: 1rem; /* Tailwind px-4 */
+            padding-right: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header .logo a {
+            color: white;
+            font-size: 1.875rem; /* Tailwind text-3xl */
+            font-weight: 700; /* Tailwind font-bold */
+            letter-spacing: -0.025em; /* Tailwind tracking-tight */
+            padding: 0.25rem 0.5rem; /* Tailwind px-2 py-1 */
+            border-radius: 0.5rem; /* Tailwind rounded-lg */
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+        }
+        header .logo a:hover {
+            background-color: var(--dark-red);
+        }
+        header nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 2rem; /* Tailwind space-x-8 */
+        }
+        header nav ul li a {
+            color: white;
+            font-size: 1.125rem; /* Tailwind text-lg */
+            border-radius: 0.5rem; /* Tailwind rounded-lg */
+            padding: 0.5rem 0.75rem; /* Tailwind px-3 py-2 */
+            transition: color 0.3s ease, background-color 0.3s ease;
+            text-decoration: none;
+        }
+        header nav ul li a:hover {
+            color: var(--lighter-red);
+            background-color: transparent;
+        }
+        header nav ul li a[aria-current="page"] {
+            background-color: var(--dark-red);
+            font-weight: 600;
+        }
+        header nav ul li a[aria-current="page"]:hover {
+            background-color: var(--primary-red);
+        }
+
+        footer {
+            background-color: #1f2937; /* Tailwind gray-800 */
+            color: white;
+            padding: 2rem 0;
+            margin-top: auto;
+        }
+        footer .footer-content {
+            text-align: center;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            max-width: 80rem;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 1.5rem;
+        }
+        footer .footer-content .col-md-4,
+        footer .footer-content .col-md-2,
+        footer .footer-content .col-md-3 {
+            flex: 1 1 auto;
+            min-width: 200px;
+            max-width: 100%;
+            text-align: left;
+        }
+        @media (min-width: 768px) {
+            footer .footer-content .col-md-4 { max-width: 30%; }
+            footer .footer-content .col-md-2 { max-width: 15%; }
+            footer .footer-content .col-md-3 { max-width: 25%; }
+        }
+
+        footer h5 {
+            color: var(--secondary-red);
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        footer p {
+            font-size: 0.9rem;
+            line-height: 1.5;
+            color: #d1d5db; /* Tailwind gray-300 */
+        }
+        footer ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        footer ul li {
+            margin-bottom: 0.5rem;
+        }
+        footer ul li a {
+            color: #9ca3af; /* Tailwind gray-400 */
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-size: 0.9rem;
+        }
+        footer ul li a:hover {
+            color: white;
+        }
+        footer .social-links {
+            margin-top: 1rem;
+            font-size: 1.5rem;
+            display: flex;
+            justify-content: flex-start;
+            gap: 1rem;
+        }
+        footer .social-links a {
+            color: white;
+            transition: color 0.3s ease;
+            text-decoration: none; /* Ensure no underline on icons */
+        }
+        footer .social-links a:hover {
+            color: var(--secondary-red);
+        }
+        footer .copyright {
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #374151; /* Tailwind gray-700 */
+            text-align: center;
+            width: 100%;
+            font-size: 0.85rem;
+            color: #9ca3af;
+        }
+
+        /* Main Policy Wrapper */
+        .policy-wrapper {
+            display: flex;
+            flex-grow: 1;
+            max-width: 80rem;
+            margin: 1.5rem auto;
+            background-color: white;
+            border-radius: 0.5rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            flex-direction: column;
+        }
+        @media (min-width: 1024px) {
+            .policy-wrapper {
+                flex-direction: row;
+            }
+        }
+
+        /* Sidebar Navigation */
+        .sidebar {
+            width: 100%;
+            flex-shrink: 0;
+            background-color: var(--light-red);
+            padding: 1.5rem 2rem;
+            border-bottom: 1px solid var(--mid-red);
+            position: sticky;
+            top: 0;
+            align-self: flex-start;
+            height: auto;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+        }
+        @media (min-width: 1024px) {
+            .sidebar {
+                width: 18rem;
+                border-bottom: 0;
+                border-right: 1px solid var(--mid-red);
+                height: calc(100vh - 4rem); /* Adjust height for sticky behavior */
+            }
+        }
+
+        .sidebar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.25rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--primary-red);
+        }
+        @media (min-width: 1024px) {
+            .sidebar-header {
+                border-bottom: 0;
+                margin-bottom: 0;
+                padding-bottom: 0;
+            }
+        }
+
+        .sidebar h2 {
+            color: var(--dark-red);
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0;
+            line-height: 1.2;
+        }
+
+        .sidebar-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.875rem;
+            cursor: pointer;
+            color: var(--primary-red);
+            padding: 0.25rem;
+            border-radius: 0.375rem;
+            transition: background-color 0.2s ease;
+        }
+        .sidebar-toggle:hover {
+            background-color: var(--lighter-red);
+        }
+
+        .sidebar-toggle .fa-times {
+            display: none;
+        }
+        .sidebar-toggle.active .fa-bars {
+            display: none;
+        }
+        .sidebar-toggle.active .fa-times {
+            display: inline-block;
+        }
+
+        .sidebar nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out;
+        }
+
+        .sidebar nav ul.open {
+            max-height: fit-content;
+            border-top: 1px solid var(--lighter-red);
+            padding-top: 1rem;
+            margin-top: 1rem;
+        }
+        @media (min-width: 1024px) {
+            .sidebar nav ul {
+                max-height: initial !important;
+                padding-top: 0 !important;
+                margin-top: 0 !important;
+                border-top: 0 !important;
+            }
+        }
+
+        .sidebar nav ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .sidebar nav ul li a {
+            text-decoration: none;
+            color: var(--gray-text);
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            padding: 0.75rem;
+            border-radius: 0.375rem;
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            font-size: 1rem;
+        }
+
+        .sidebar nav ul li a:hover,
+        .sidebar nav ul li a.active {
+            background-color: var(--primary-red);
+            color: white;
+            transform: translateX(4px);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        .sidebar-icon {
+            margin-right: 0.75rem;
+            font-size: 1.125rem;
+            color: var(--secondary-red);
+            transition: color 0.3s ease;
+        }
+
+        .sidebar nav ul li a.active .sidebar-icon,
+        .sidebar nav ul li a:hover .sidebar-icon {
+            color: white;
+        }
+
+        /* Main Content Area */
+        .content {
+            flex: 1;
+            padding: 1.5rem 2rem;
+            position: relative;
+        }
+
+        .policy-heading {
+            color: var(--dark-red);
+            font-size: 2.25rem;
+            font-weight: 800;
+            margin-top: 0;
+            margin-bottom: 0.75rem;
+            padding-bottom: 1rem;
+            border-bottom: 4px solid var(--primary-red);
+            filter: drop-shadow(0 1px 1px rgba(0,0,0,0.05));
+        }
+        @media (min-width: 768px) {
+            .policy-heading {
+                font-size: 2.25rem;
+            }
+        }
+        @media (min-width: 1024px) {
+            .policy-heading {
+                font-size: 3rem;
+            }
+        }
+
+        .last-updated {
+            font-style: italic;
+            color: var(--gray-text);
+            margin-bottom: 1.5rem;
+            font-size: 0.875rem;
+        }
+        @media (min-width: 768px) {
+            .last-updated {
+                font-size: 1rem;
+            }
+        }
+
+        /* Search Bar */
+        .search-box {
+            position: relative;
+            margin-bottom: 2rem;
+        }
+
+        .search-box input[type="text"] {
+            width: 100%;
+            padding: 0.75rem 1rem 0.75rem 3rem;
+            border: 1px solid var(--border-color);
+            border-radius: 9999px;
+            font-size: 1rem;
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            transition: all 0.2s ease;
+            color: var(--gray-text);
+        }
+
+        .search-box input[type="text"]::placeholder {
+            color: #6b7280;
+        }
+
+        .search-box input[type="text"]:focus {
+            outline: none;
+            border-color: var(--secondary-red);
+            box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.3);
+        }
+
+        .search-box .search-icon {
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #6b7280;
+            font-size: 1.125rem;
+        }
+
+        /* Policy Sections */
+        .policy-section {
+            margin-bottom: 2.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px dashed #d1d5db; /* Retaining dashed border for content sections */
+        }
+
+        .policy-section:last-child {
+            border-bottom: none;
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            color: var(--dark-red);
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1.25rem;
+            position: relative;
+            padding-left: 2.25rem;
+            line-height: 1.375;
+        }
+        @media (min-width: 768px) {
+            .section-title {
+                font-size: 1.875rem;
+            }
+        }
+
+        .section-icon {
+            position: absolute;
+            left: 0;
+            top: 0.25rem;
+            color: var(--primary-red);
+            font-size: 1.25rem;
+        }
+
+        .section-content {
+            font-size: 1rem;
+            color: var(--gray-text);
+            line-height: 1.625;
+        }
+        .section-content h3 {
+            color: var(--primary-red);
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+        @media (min-width: 768px) {
+            .section-content h3 {
+                font-size: 1.5rem;
+            }
+        }
+
+        .section-content ul,
+        .section-content ol {
+            list-style: disc; /* Keep disc for ul, decimal for ol */
+            margin-left: 1.5rem;
+            padding: 0;
+            line-height: 1.75rem;
+        }
+        .section-content ol {
+            list-style: decimal;
+        }
+        @media (min-width: 768px) {
+            .section-content ul,
+            .section-content ol {
+                margin-left: 2rem;
+            }
+        }
+        .section-content ul li,
+        .section-content ol li {
+            margin-bottom: 0.5rem;
+        }
+        .section-content strong {
+            color: var(--dark-red); /* Consistent with new theme */
+        }
+        .section-content a {
+            color: var(--primary-red);
+            text-decoration: none;
+            transition: text-decoration 0.2s ease;
+        }
+        .section-content a:hover {
+            text-decoration: underline;
+        }
+
+        /* Highlighted search results */
+        .highlight {
+            background-color: var(--highlight-yellow);
+            padding: 0 0.125rem;
+            border-radius: 0.125rem;
+            font-weight: 600;
+            color: #1f2937;
+        }
+
+        /* Call to action */
+        .call-to-action {
+            background-color: var(--lighter-red); /* Light red for action */
+            padding: 1.25rem;
+            border-radius: 0.5rem;
+            text-align: center;
+            margin-top: 2.5rem;
+            border: 1px solid var(--mid-red);
+        }
+        .call-to-action p {
+            margin: 0;
+            font-size: 1.125rem;
+            color: var(--dark-red); /* Darker red for action text */
+        }
+        .call-to-action a {
+            color: var(--primary-red);
+            font-weight: 700;
+            text-decoration: none;
+        }
+        .call-to-action a:hover {
+            text-decoration: underline;
+        }
+
+        /* Return to Top Button */
+        .return-to-top {
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .scroll-to-top {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.75rem 1.5rem;
+            background-color: var(--primary-red);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 9999px;
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            font-weight: 700;
+            font-size: 1.125rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        .scroll-to-top:hover {
+            background-color: var(--dark-red);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        .scroll-to-top i {
+            margin-right: 0.75rem;
+            font-size: 1.25rem;
+        }
+
+        /* --- Responsive Design Media Queries --- */
+
+        /* For screens smaller than 1024px (lg breakpoint and below) */
+        @media (max-width: 1023px) {
+            .policy-wrapper {
+                margin: 1rem;
+                border-radius: 0.5rem;
+                box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            }
+
+            .sidebar {
+                position: relative;
+                height: auto;
+                border-right: none;
+                border-bottom: 1px solid var(--mid-red); /* Consistent with new theme */
+                padding: 1.25rem;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+                overflow-y: hidden;
+            }
+
+            .sidebar-header {
+                border-bottom: none;
+                margin-bottom: 0;
+                padding-bottom: 0;
+            }
+
+            .sidebar h2 {
+                font-size: 1.4rem;
+            }
+
+            .sidebar-toggle {
+                display: block;
+            }
+
+            .sidebar nav ul {
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.4s ease-out;
+                border-top: 1px solid transparent; /* For smooth transition appearance */
+            }
+            .sidebar nav ul.open {
+                max-height: 25rem; /* Sufficient for typical mobile menus */
+                border-top: 1px solid var(--lighter-red); /* Consistent with new theme */
+                padding-top: 1rem;
+                margin-top: 1rem;
+            }
+
+            .sidebar-toggle .fa-times {
+                display: none;
+            }
+            .sidebar-toggle.active .fa-bars {
+                display: none;
+            }
+            .sidebar-toggle.active .fa-times {
+                display: inline-block;
+            }
+
+
+            .content {
+                padding: 1.5rem;
+            }
+
+            .policy-heading {
+                font-size: 2rem;
+            }
+
+            .section-title {
+                font-size: 1.75rem;
+                padding-left: 2rem;
+            }
+
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 1rem;
+            }
+            header .container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            header nav {
+                width: 100%;
+                margin-top: 0.5rem;
+            }
+            header nav ul {
+                flex-direction: column;
+                width: 100%;
+                margin-top: 0.5rem;
+                display: none; /* Hidden by default for mobile nav */
+            }
+            header nav ul.mobile-menu-open { /* Class toggled by JS */
+                display: flex;
+            }
+            header nav ul li {
+                margin: 0.25rem 0;
+                width: 100%;
+            }
+            header nav ul li a {
+                padding: 0.5rem 0.75rem;
+                background-color: rgba(255,255,255,0.1);
+                border-radius: 0.375rem;
+            }
+
+            footer .footer-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            footer .footer-content .col-md-4,
+            footer .footer-content .col-md-2,
+            footer .footer-content .col-md-3 {
+                max-width: 100%;
+                text-align: center;
+            }
+            footer .social-links {
+                justify-content: center;
+            }
+        }
+
+        /* For screens smaller than 768px (md breakpoint and below) */
+        @media (max-width: 767px) {
+            .policy-heading {
+                font-size: 1.8rem;
+                padding-bottom: 0.75rem;
+            }
+
+            .last-updated {
+                margin-bottom: 1.25rem;
+            }
+
+            .search-box input[type="text"] {
+                padding: 0.625rem 0.75rem 0.625rem 2.5rem;
+                font-size: 0.9rem;
+            }
+            .search-box .search-icon {
+                left: 0.75rem;
+                font-size: 1em;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+                padding-left: 25px; /* Adjust for smaller icon */
+            }
+
+            .section-icon {
+                font-size: 1.125rem; /* Slightly smaller */
+                top: 0.2rem;
+            }
+
+            .section-content {
+                font-size: 0.95rem;
+            }
+
+            .return-to-top {
+                margin-top: 2rem;
+            }
+            .scroll-to-top {
+                padding: 0.625rem 1.25rem;
+                font-size: 0.9em;
+            }
+            .scroll-to-top i {
+                margin-right: 0.5rem;
+                font-size: 1.1em;
+            }
+        }
+
+        /* For very small screens / mobile portrait */
+        @media (max-width: 480px) {
+            .policy-wrapper {
+                margin: 0.5rem;
+                border-radius: 0.25rem;
+            }
+
+            .sidebar {
+                padding: 1rem;
+            }
+
+            .sidebar nav ul.open {
+                max-height: 25rem;
+            }
+
+            .content {
+                padding: 1rem;
+            }
+
+            .policy-heading {
+                font-size: 1.5rem;
+            }
+
+            .section-title {
+                font-size: 1.25rem;
+                padding-left: 20px; /* Further adjust for smaller icon */
+            }
+            .section-icon {
+                font-size: 1rem; /* Even smaller */
+                top: 0.15rem;
+            }
+            .section-content ul,
+            .section-content ol {
+                margin-left: 1rem;
+            }
+
+            .call-to-action {
+                padding: 1rem;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+    </head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="home.php">Sair Karo</a>
+            </div>
+            <nav aria-label="Main Navigation">
+                <ul>
+                    <li><a href="home.php">Home</a></li>
+                    <li><a href="contact.php">Contact Us</a></li>
+                    <li><a href="privacy_policy.html">Privacy Policy</a></li>
+                    <li><a href="terms_conditions.html">Terms & Conditions</a></li>
+                    <li><a href="refund_policy.html">Refund Policy</a></li>
+                    <li><a href="cookie_policy.html">Cookie Policy</a></li>
+                    <li><a href="faq.html" aria-current="page">FAQs</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <a href="#main-content" class="skip-to-content-link">Skip to main content</a>
+
+    <div class="policy-wrapper" role="document">
+        <aside class="sidebar" aria-label="FAQ Navigation" id="sidebar">
+            <div class="sidebar-header">
+                <h2>Sections</h2>
+                <button class="sidebar-toggle" id="sidebar-toggle" aria-expanded="false" aria-controls="sidebar-nav">
+                    <i class="fas fa-bars"></i>
+                    <i class="fas fa-times"></i>
+                    <span class="sr-only">Toggle navigation</span>
+                </button>
+            </div>
+            <nav id="sidebar-nav" aria-label="FAQ Sections">
+                <ul>
+                    <li>
+                        <a href="#general-questions" class="sidebar-link">
+                            <i class="fas fa-question-circle sidebar-icon" aria-hidden="true"></i> General Questions
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#booking-questions" class="sidebar-link">
+                            <i class="fas fa-ticket-alt sidebar-icon" aria-hidden="true"></i> Booking Questions
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#cancellation-refunds" class="sidebar-link">
+                            <i class="fas fa-undo-alt sidebar-icon" aria-hidden="true"></i> Cancellation & Refunds
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#other-questions" class="sidebar-link">
+                            <i class="fas fa-info-circle sidebar-icon" aria-hidden="true"></i> Other Questions
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#contact-us" class="sidebar-link">
+                            <i class="fas fa-envelope sidebar-icon" aria-hidden="true"></i> Contact Us
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="content" id="main-content">
+            <h1 class="policy-heading">Frequently Asked Questions (FAQs)</h1>
+            <p class="last-updated">Last updated: <time datetime="2025-06-23">June 23, 2025</time></p>
+
+            <div class="search-box">
+                <label for="policySearch" class="sr-only">Search FAQs</label>
+                <input type="text" id="policySearch" placeholder="Search FAQs..." aria-label="Search FAQs">
+                <i class="fas fa-search search-icon" aria-hidden="true"></i>
+            </div>
+
+            <div id="policyContent">
+                <section id="general-questions" class="policy-section" aria-labelledby="general-questions-title">
+                    <h2 class="section-title" id="general-questions-title">
+                        <i class="fas fa-question-circle section-icon" aria-hidden="true"></i> General Questions
+                    </h2>
+                    <div class="section-content">
+                        <h3>Q1: What is Sair Karo?</h3>
+                        <p><strong>A:</strong> Sair Karo is your one-stop online platform for booking bus, train, and flight tickets easily and securely. We aim to provide a seamless travel planning experience.</p>
+
+                        <h3>Q2: How do I create an account?</h3>
+                        <p><strong>A:</strong> You can create an account by clicking on the "Signup" button in the top right corner of the homepage and following the registration process.</p>
+
+                        <h3>Q3: Is my personal information safe with Sair Karo?</h3>
+                        <p><strong>A:</strong> Yes, we take your privacy seriously. Please refer to our <a href="privacy_policy.html">Privacy Policy</a> for detailed information on how we collect, use, and protect your data.</p>
+
+                        <h3>Q4: How can I contact customer support?</h3>
+                        <p><strong>A:</strong> You can reach our customer support team via the "<a href="contact.php">Contact Us</a>" page, or by using the live chat widget available on most pages for instant assistance from our AI travel assistant.</p>
+                    </div>
+                </section>
+
+                <section id="booking-questions" class="policy-section" aria-labelledby="booking-questions-title">
+                    <h2 class="section-title" id="booking-questions-title">
+                        <i class="fas fa-ticket-alt section-icon" aria-hidden="true"></i> Booking Questions
+                    </h2>
+                    <div class="section-content">
+                        <h3>Q5: How do I book a bus/train/flight ticket?</h3>
+                        <p><strong>A:</strong> On the homepage, use the search widget. Select your travel mode (Bus, Train, or Flight), enter your origin, destination, and date(s) of journey. Click "Search" to find available options and proceed with your booking.</p>
+
+                        <h3>Q6: Can I book a round trip?</h3>
+                        <p><strong>A:</strong> Yes, for bus and flight bookings, you can select the "Return Date" option in the search widget to book a round trip.</p>
+
+                        <h3>Q7: How will I receive my ticket?</h3>
+                        <p><strong>A:</strong> Once your booking is confirmed, your ticket details will be sent to your registered email address and will also be accessible in your "<a href="my_bookings.php">My Bookings</a>" section if you are logged in.</p>
+
+                        <h3>Q8: What if my payment fails?</h3>
+                        <p><strong>A:</strong> If your payment fails, please check your internet connection and try again. If the issue persists, contact your bank or try an alternative payment method. If your account is debited but the booking is not confirmed, the amount will typically be refunded automatically within a few business days.</p>
+                    </div>
+                </section>
+
+                <section id="cancellation-refunds" class="policy-section" aria-labelledby="cancellation-refunds-title">
+                    <h2 class="section-title" id="cancellation-refunds-title">
+                        <i class="fas fa-undo-alt section-icon" aria-hidden="true"></i> Cancellation and Refunds
+                    </h2>
+                    <div class="section-content">
+                        <h3>Q9: How can I cancel my booking?</h3>
+                        <p><strong>A:</strong> Cancellation procedures vary based on the service provider and ticket type. Please visit your "<a href="my_bookings.php">My Bookings</a>" section to manage your existing bookings or refer to our <a href="refund_policy.html">Refund Policy</a> for detailed steps and conditions.</p>
+
+                        <h3>Q10: What is your refund policy?</h3>
+                        <p><strong>A:</strong> Our refund policy outlines the terms and conditions for cancellations and refunds. You can find the full details on our <a href="refund_policy.html">Refund Policy</a> page.</p>
+                    </div>
+                </section>
+
+                <section id="other-questions" class="policy-section" aria-labelledby="other-questions-title">
+                    <h2 class="section-title" id="other-questions-title">
+                        <i class="fas fa-info-circle section-icon" aria-hidden="true"></i> Other Questions
+                    </h2>
+                    <div class="section-content">
+                        <h3>Q11: How do I report an issue or provide feedback?</h3>
+                        <p><strong>A:</strong> You can report an issue through the "<a href="report_issue.html">Report an Issue</a>" link in the footer or submit general feedback via our "<a href="feedback.php">Feedback</a>" page.</p>
+
+                        <h3>Q12: Where can I find information about offers and deals?</h3>
+                        <p><strong>A:</strong> All our exclusive offers and deals are displayed on the homepage under the "Exclusive Offers & Deals" section. Keep an eye on this section for the latest discounts!</p>
+                    </div>
+                </section>
+
+                <section id="contact-us" class="policy-section" aria-labelledby="contact-us-title">
+                    <h2 class="section-title" id="contact-us-title">
+                        <i class="fas fa-envelope section-icon" aria-hidden="true"></i> Contact Us
+                    </h2>
+                    <div class="section-content">
+                        <p>If you have any further questions that aren't covered here, please don't hesitate to reach out to our customer support team:</p>
+                        <ul>
+                            <li>By email: <a href="mailto:ajay@gmail.com">ajay@gmail.com</a></li>
+                            <li>By visiting our contact page: <a href="contact.php">contact.php</a></li>
+                            <li>By mail: Sair Karo, 123 Travel Lane, Koregaon Park, Pune, Maharashtra 411001, India</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+
+            <div class="call-to-action">
+                <p>Still have questions? Our AI assistant can help! <a href="#" onclick="event.preventDefault(); document.getElementById('liveChatButton').click();">Start a chat now</a>.</p>
+            </div>
+
+            <div class="return-to-top">
+                <a href="#top" class="scroll-to-top" aria-label="Return to top of page">
+                    <i class="fas fa-arrow-circle-up" aria-hidden="true"></i> Return to Top
+                </a>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="col-md-4 mb-4 mb-md-0">
+                <h5>Sair Karo</h5>
+                <p>
+                    Sair Karo is your trusted partner for seamless travel bookings across India.
+                    We offer a convenient platform to book buses, trains, and flights with ease and confidence.
+                    Your journey, our priority.
+                </p>
+                <div class="social-links mt-3">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <div class="col-md-2 mb-4 mb-md-0">
+                <h5>Quick Links</h5>
+                <ul>
+                    <li><a href="home.php">Home</a></li>
+                    <li><a href="about.php">About Us</a></li>
+                    <li><a href="services.php">Services</a></li>
+                    <li><a href="contact.php">Contact Us</a></li>
+                    <li><a href="feedback.php">Feedback</a></li>
+                    <li><a href="faq.html">FAQs</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-2 mb-4 mb-md-0">
+                <h5>Policies</h5>
+                <ul>
+                    <li><a href="privacy_policy.html">Privacy Policy</a></li>
+                    <li><a href="terms_conditions.html">Terms & Conditions</a></li>
+                    <li><a href="refund_policy.html">Cancellation & Refund</a></li>
+                    <li><a href="cookie_policy.html">Cookie Policy</a></li>
+                    <li><a href="report_issue.html">Report an Issue</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-4 col-lg-3">
+                <h5>Contact Info</h5>
+                <address>
+                    <p><i class="fas fa-map-marker-alt me-2"></i> 123 Travel Lane, Koregaon Park, Pune, Maharashtra 411001, India</p>
+                    <p><i class="fas fa-phone me-2"></i> +91 98765 43210</p>
+                    <p><i class="fas fa-envelope me-2"></i> ajay@gmail.com</p>
+                </address>
+            </div>
+            <div class="copyright">
+                &copy; 2025 Sair Karo. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const sidebarToggle = document.getElementById('sidebar-toggle');
+            const sidebarNav = document.getElementById('sidebar-nav');
+            const sidebarLinks = document.querySelectorAll('.sidebar-link');
+            const policySections = document.querySelectorAll('.policy-section');
+            const policySearchInput = document.getElementById('policySearch');
+            let originalContent = {};
+
+            // Store original content of each section for highlighting/reset
+            policySections.forEach(section => {
+                originalContent[section.id] = section.querySelector('.section-content').innerHTML;
+            });
+
+            // --- Mobile Sidebar Toggle ---
+            if (sidebarToggle && sidebarNav) {
+                sidebarToggle.addEventListener('click', function() {
+                    const isExpanded = this.getAttribute('aria-expanded') === 'true';
+                    this.setAttribute('aria-expanded', !isExpanded);
+                    sidebarNav.classList.toggle('open');
+                    this.classList.toggle('active'); // Toggle class for icon change
+                    if (sidebarNav.classList.contains('open')) {
+                        sidebarNav.style.maxHeight = sidebarNav.scrollHeight + "px";
+                    } else {
+                        sidebarNav.style.maxHeight = "0";
+                    }
+                });
+            }
+
+            // --- Smooth Scrolling & Active Link Highlighting ---
+            sidebarLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+
+                    const targetId = this.getAttribute('href');
+                    const targetSection = document.querySelector(targetId);
+
+                    if (targetSection) {
+                        targetSection.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+
+                        sidebarLinks.forEach(innerLink => {
+                            innerLink.classList.remove('active');
+                        });
+                        this.classList.add('active');
+
+                        if (window.innerWidth <= 1023 && sidebarNav.classList.contains('open')) {
+                            sidebarToggle.click();
+                        }
+                    }
+                });
+            });
+
+            // Intersection Observer for highlighting sidebar links on scroll
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.3
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const id = entry.target.id;
+                        sidebarLinks.forEach(link => {
+                            link.classList.remove('active');
+                            if (link.getAttribute('href') === `#${id}`) {
+                                link.classList.add('active');
+                            }
+                        });
+                    }
+                });
+            }, observerOptions);
+
+            policySections.forEach(section => {
+                observer.observe(section);
+            });
+
+            // --- Search Functionality ---
+            policySearchInput.addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase().trim();
+
+                policySections.forEach(section => {
+                    const sectionContentElement = section.querySelector('.section-content');
+                    const sectionTitleElement = section.querySelector('.section-title');
+                    const originalSectionContent = originalContent[section.id];
+
+                    sectionContentElement.innerHTML = originalSectionContent;
+
+                    let sectionMatches = false;
+
+                    if (searchTerm === '') {
+                        section.style.display = 'block';
+                        return;
+                    }
+
+                    if (sectionTitleElement.textContent.toLowerCase().includes(searchTerm)) {
+                        sectionMatches = true;
+                    }
+
+                    const regex = new RegExp(`(${searchTerm})`, 'gi');
+                    const highlightedContent = originalSectionContent.replace(regex, '<span class="highlight">$1</span>');
+
+                    if (highlightedContent !== originalSectionContent) {
+                        sectionContentElement.innerHTML = highlightedContent;
+                        sectionMatches = true;
+                    }
+
+                    if (sectionMatches) {
+                        section.style.display = 'block';
+                    } else {
+                        section.style.display = 'none';
+                    }
+                });
+            });
+
+            // --- Initial Active Link State on Load ---
+            if (sidebarLinks.length > 0) {
+                if (!window.location.hash) {
+                    sidebarLinks[0].classList.add('active');
+                } else {
+                    const hashLink = document.querySelector(`.sidebar-link[href="${window.location.hash}"]`);
+                    if (hashLink) {
+                        hashLink.classList.add('active');
+                        document.querySelector(window.location.hash).scrollIntoView({
+                            behavior: 'instant',
+                            block: 'start'
+                        });
+                    } else {
+                        sidebarLinks[0].classList.add('active');
+                    }
+                }
+            }
+        });
+    </script>
+    </body>
+</html>

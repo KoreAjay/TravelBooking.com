@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sair Karo's Privacy Policy explains how we collect, use, and protect your personal information related to travel bookings.">
+    <title>Privacy Policy - Sair Karo</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrpSgXJ6L/B6g0s2sU6N5uO/nC7Z1j4K4yI0+I/r9wz9L/Q1P/6r/j+8Xw0Q2f5uM3o2p/y9q2yq3t/8A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Universal Box-sizing */
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+
+        :root {
+            /* Red-themed color palette */
+            --primary-red: #dc2626; /* Corresponds to Tailwind red-600 */
+            --secondary-red: #ef4444; /* Corresponds to Tailwind red-500 */
+            --light-red: #fef2f2; /* Corresponds to Tailwind red-50, for backgrounds */
+            --lighter-red: #fee2e2; /* Corresponds to Tailwind red-100, for hover states */
+            --dark-red: #b91c1c; /* Corresponds to Tailwind red-700, for darker text/headers */
+            --mid-red: #fca5a5; /* Corresponds to Tailwind red-300, for borders */
+            --gray-text: #4b5563; /* Tailwind gray-700 */
+            --light-gray: #f8fafc; /* Tailwind gray-50 */
+            --border-color: #e2e8f0; /* Tailwind slate-200 */
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.7;
+            background-color: var(--light-gray);
+            color: var(--gray-text); /* Default text color */
+        }
+
+        /* Header Styles */
+        .main-header {
+            background-color: var(--primary-red);
+            padding: 1.5rem 0; /* Tailwind p-4 md:p-6 */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1); /* Tailwind shadow-md */
+        }
+
+        .main-header .logo a {
+            color: white;
+            font-size: 1.875rem; /* Tailwind text-3xl */
+            font-weight: 700; /* Tailwind font-bold */
+            letter-spacing: -0.025em; /* Tailwind tracking-tight */
+            padding: 0.25rem 0.5rem; /* Tailwind px-2 py-1 */
+            border-radius: 0.5rem; /* Tailwind rounded-lg */
+            transition: background-color 0.3s ease;
+            text-decoration: none; /* Ensure no underline */
+        }
+
+        .main-header .logo a:hover {
+            background-color: var(--dark-red); /* Darker red on hover */
+        }
+
+        .main-header nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 2rem; /* Tailwind space-x-8 */
+        }
+
+        .main-header nav a {
+            color: white;
+            font-size: 1.125rem; /* Tailwind text-lg */
+            border-radius: 0.5rem; /* Tailwind rounded-lg */
+            padding: 0.5rem 0.75rem; /* Tailwind px-3 py-2 */
+            transition: color 0.3s ease, background-color 0.3s ease;
+            text-decoration: none; /* No underline for navigation links */
+        }
+
+        .main-header nav a:hover {
+            color: var(--lighter-red); /* Lighter red on hover */
+            background-color: transparent; /* Ensure no background change unless active */
+        }
+
+        .main-header nav a[aria-current="page"] {
+            background-color: var(--dark-red); /* Darker red for active page */
+            font-weight: 600; /* Tailwind font-semibold */
+        }
+
+        .main-header nav a[aria-current="page"]:hover {
+            background-color: var(--primary-red); /* Primary red on hover for active */
+        }
+
+        /* Skip to Content Link for Accessibility */
+        .skip-to-content-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--primary-red);
+            color: white;
+            padding: 8px;
+            z-index: 1000;
+            transition: top 0.3s ease-in-out;
+        }
+        .skip-to-content-link:focus {
+            top: 0;
+        }
+
+        /* Main Wrapper */
+        .privacy-policy-wrapper {
+            max-width: 80rem; /* Tailwind max-w-7xl */
+            margin: 1.5rem auto; /* Tailwind my-6 mx-auto */
+            background-color: white;
+            border-radius: 0.5rem; /* Tailwind rounded-lg */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* Tailwind shadow-xl */
+            display: flex;
+            flex-direction: column; /* For mobile */
+            overflow: hidden;
+        }
+        @media (min-width: 1024px) { /* lg breakpoint */
+            .privacy-policy-wrapper {
+                flex-direction: row;
+            }
+        }
+
+        /* Sidebar Navigation */
+        .sidebar {
+            width: 100%;
+            flex-shrink: 0;
+            background-color: var(--light-red); /* Lighter red background for sidebar */
+            padding: 1.5rem 2rem; /* Tailwind p-6 lg:p-8 */
+            border-bottom: 1px solid var(--mid-red); /* Bottom border for mobile */
+            position: sticky;
+            top: 0;
+            align-self: flex-start;
+            height: auto;
+            overflow-y: auto;
+        }
+        @media (min-width: 1024px) { /* lg breakpoint */
+            .sidebar {
+                width: 18rem; /* Tailwind w-72 */
+                border-bottom: 0;
+                border-right: 1px solid var(--mid-red); /* Right border for desktop */
+                height: calc(100vh - 4rem); /* Adjust height for sticky behavior */
+            }
+        }
+
+        .sidebar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.25rem; /* Tailwind mb-5 */
+            padding-bottom: 1rem; /* Tailwind pb-4 */
+            border-bottom: 2px solid var(--primary-red); /* Darker red border */
+        }
+        @media (min-width: 1024px) {
+            .sidebar-header {
+                border-bottom: 0;
+                margin-bottom: 0;
+                padding-bottom: 0;
+            }
+        }
+
+        .sidebar-header h2 {
+            color: var(--dark-red); /* Darker red for sidebar heading */
+            font-size: 1.5rem; /* Tailwind text-2xl */
+            font-weight: 700; /* Tailwind font-bold */
+        }
+
+        .sidebar-toggle {
+            display: none; /* Hidden by default, shown for md breakpoint in HTML */
+            color: var(--primary-red);
+            font-size: 1.875rem; /* Tailwind text-3xl */
+            cursor: pointer;
+            padding: 0.25rem;
+            border-radius: 0.375rem; /* Tailwind rounded-md */
+            transition: background-color 0.2s ease;
+        }
+        .sidebar-toggle:hover {
+            background-color: var(--lighter-red); /* Lighter red on hover */
+        }
+
+        /* Custom modal styles */
+        .sidebar-toggle .fa-times {
+            display: none;
+        }
+        .sidebar-toggle.active .fa-bars {
+            display: none;
+        }
+        .sidebar-toggle.active .fa-times {
+            display: inline-block;
+        }
+
+        .sidebar nav {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out;
+        }
+        .sidebar nav.open {
+            max-height: fit-content; /* Set by JS */
+            border-top: 1px solid var(--lighter-red); /* Border when open */
+            padding-top: 1rem;
+            margin-top: 1rem;
+        }
+        @media (min-width: 1024px) { /* lg breakpoint */
+            .sidebar nav {
+                max-height: initial !important; /* Override JS for desktop */
+                padding-top: 0 !important;
+                margin-top: 0 !important;
+                border-top: 0 !important;
+            }
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .sidebar-link {
+            display: flex;
+            align-items: center;
+            padding: 0.75rem; /* Tailwind p-3 */
+            border-radius: 0.375rem; /* Tailwind rounded-md */
+            color: var(--gray-text);
+            font-weight: 500; /* Tailwind font-medium */
+            font-size: 1rem; /* Tailwind text-base */
+            transition: all 0.3s ease;
+            margin-bottom: 0.5rem; /* Tailwind mb-2 */
+            text-decoration: none;
+        }
+
+        .sidebar-link:hover {
+            background-color: var(--primary-red);
+            color: white;
+            transform: translateX(4px); /* Tailwind translate-x-1 */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.05); /* Tailwind shadow-md */
+        }
+
+        .sidebar-icon {
+            color: var(--secondary-red); /* Secondary red for icons */
+            font-size: 1.125rem; /* Tailwind text-lg */
+            margin-right: 0.75rem; /* Tailwind mr-3 */
+            transition: color 0.3s ease;
+        }
+
+        .sidebar-link:hover .sidebar-icon,
+        .sidebar-link.active .sidebar-icon {
+            color: white; /* White icon on hover/active */
+        }
+
+        /* Main Content Area */
+        .content {
+            flex: 1; /* Tailwind flex-1 */
+            padding: 1.5rem 2rem; /* Tailwind p-6 md:p-8 lg:p-10 */
+            position: relative;
+        }
+
+        .policy-heading {
+            color: var(--dark-red); /* Dark red for main heading */
+            font-size: 2.25rem; /* Tailwind text-3xl */
+            font-weight: 800; /* Tailwind font-extrabold */
+            margin-top: 0;
+            margin-bottom: 0.75rem; /* Tailwind mb-3 */
+            padding-bottom: 1rem; /* Tailwind pb-4 */
+            border-bottom: 4px solid var(--primary-red); /* Primary red thick border */
+            filter: drop-shadow(0 1px 1px rgba(0,0,0,0.05)); /* Tailwind drop-shadow-sm */
+        }
+        @media (min-width: 768px) {
+            .policy-heading {
+                font-size: 2.25rem; /* md:text-4xl */
+            }
+        }
+        @media (min-width: 1024px) {
+            .policy-heading {
+                font-size: 3rem; /* lg:text-5xl */
+            }
+        }
+
+
+        .last-updated {
+            font-style: italic;
+            color: var(--gray-text);
+            margin-bottom: 1.5rem; /* Tailwind mb-6 */
+            font-size: 0.875rem; /* Tailwind text-sm */
+        }
+        @media (min-width: 768px) {
+            .last-updated {
+                font-size: 1rem; /* md:text-base */
+            }
+        }
+
+
+        /* Search Box */
+        .search-box {
+            position: relative;
+            margin-bottom: 2rem; /* Tailwind mb-8 */
+        }
+        .search-box input {
+            width: 100%;
+            padding: 0.75rem 1rem 0.75rem 3rem; /* Tailwind pl-12 pr-4 py-3 */
+            border: 1px solid var(--border-color); /* Tailwind border-gray-300 */
+            border-radius: 9999px; /* Tailwind rounded-full */
+            font-size: 1rem; /* Tailwind text-base */
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); /* Tailwind shadow-sm */
+            transition: all 0.2s ease;
+        }
+        .search-box input:focus {
+            outline: none;
+            border-color: var(--secondary-red); /* Secondary red on focus */
+            box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.3); /* Red 500 with opacity for ring */
+        }
+        .search-box .search-icon {
+            position: absolute;
+            left: 1rem; /* Tailwind left-4 */
+            top: 50%;
+            transform: translateY(-50%);
+            color: #6b7280; /* Tailwind gray-500 */
+            font-size: 1.125rem; /* Tailwind text-lg */
+        }
+
+        /* Policy Sections */
+        .policy-section {
+            margin-bottom: 2.5rem; /* Tailwind mb-10 */
+            padding-bottom: 1.5rem; /* Tailwind pb-6 */
+            border-bottom: 1px dashed #d1d5db; /* Tailwind border-dashed border-gray-300 */
+        }
+
+        .section-title {
+            color: var(--dark-red); /* Dark red for section titles */
+            font-size: 1.5rem; /* Tailwind text-2xl */
+            font-weight: 700; /* Tailwind font-bold */
+            margin-bottom: 1.25rem; /* Tailwind mb-5 */
+            position: relative;
+            padding-left: 2.25rem; /* Tailwind pl-9 */
+            line-height: 1.375; /* Tailwind leading-tight */
+        }
+        @media (min-width: 768px) {
+            .section-title {
+                font-size: 1.875rem; /* md:text-3xl */
+            }
+        }
+
+        .section-icon {
+            position: absolute;
+            left: 0;
+            top: 0.25rem; /* Tailwind top-1 */
+            color: var(--primary-red); /* Primary red for section icons */
+            font-size: 1.25rem; /* Tailwind text-xl */
+        }
+
+        .section-content {
+            color: var(--gray-text);
+            font-size: 1rem; /* Tailwind text-base */
+            line-height: 1.625; /* Tailwind leading-relaxed */
+        }
+
+        .section-content h3 {
+            color: var(--primary-red); /* Primary red for sub-headings */
+            font-size: 1.25rem; /* Tailwind text-xl */
+            font-weight: 600; /* Tailwind font-semibold */
+            margin-top: 1.5rem; /* Tailwind mt-6 */
+            margin-bottom: 0.75rem; /* Tailwind mb-3 */
+        }
+        @media (min-width: 768px) {
+            .section-content h3 {
+                font-size: 1.5rem; /* md:text-2xl */
+            }
+        }
+
+        .section-content ul {
+            list-style: disc;
+            margin-left: 1.5rem; /* Tailwind ml-6 */
+            padding: 0;
+            line-height: 1.75rem; /* Tailwind leading-loose */
+        }
+        @media (min-width: 768px) {
+            .section-content ul {
+                margin-left: 2rem; /* md:ml-8 */
+            }
+        }
+
+        .section-content ul li {
+            margin-bottom: 0.5rem; /* Tailwind mb-2 */
+        }
+
+        .section-content a {
+            color: var(--primary-red); /* Primary red for links */
+            text-decoration: none;
+        }
+
+        .section-content a:hover {
+            text-decoration: underline;
+        }
+
+        /* Search highlight class */
+        .highlight {
+            background-color: #fcd34d; /* Tailwind yellow-300 */
+            padding: 0 0.125rem; /* Tailwind px-1 */
+            border-radius: 0.125rem; /* Tailwind rounded-sm */
+            font-weight: 600; /* Tailwind font-semibold */
+            color: #1f2937; /* Tailwind gray-900 */
+        }
+
+        /* Call to Action */
+        .call-to-action {
+            background-color: var(--lighter-red); /* Changed from green-100 to lighter-red */
+            padding: 1.25rem; /* Tailwind p-5 */
+            border-radius: 0.5rem; /* Tailwind rounded-lg */
+            text-align: center;
+            margin-top: 2.5rem; /* Tailwind mt-10 */
+            border: 1px solid var(--mid-red); /* Changed from green-200 to mid-red */
+        }
+        .call-to-action p {
+            margin: 0;
+            font-size: 1.125rem; /* Tailwind text-lg */
+            color: var(--dark-red); /* Changed from green-700 to dark-red */
+        }
+        .call-to-action a {
+            color: var(--primary-red); /* Changed from primary-blue to primary-red */
+            font-weight: 700; /* Tailwind font-bold */
+            text-decoration: none;
+        }
+        .call-to-action a:hover {
+            text-decoration: underline;
+        }
+
+        /* Return to Top Button */
+        .return-to-top {
+            text-align: center;
+            margin-top: 3rem; /* Tailwind mt-12 */
+        }
+
+        .scroll-to-top {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.75rem 1.5rem; /* Tailwind px-6 py-3 */
+            background-color: var(--primary-red);
+            color: white;
+            font-size: 1.125rem; /* Tailwind text-lg */
+            font-weight: 700; /* Tailwind font-bold */
+            border-radius: 9999px; /* Tailwind rounded-full */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.05); /* Tailwind shadow-md */
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .scroll-to-top:hover {
+            background-color: var(--dark-red);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* Tailwind hover:shadow-lg */
+        }
+
+        .scroll-to-top i {
+            margin-right: 0.75rem; /* Tailwind mr-3 */
+            font-size: 1.25rem; /* Tailwind text-xl */
+        }
+
+        /* Footer */
+        .main-footer {
+            background-color: #1f2937; /* Tailwind gray-800 */
+            color: white;
+            padding: 2rem 0; /* Tailwind py-8 */
+            margin-top: auto; /* Push footer to bottom */
+        }
+        .main-footer .container {
+            text-align: center;
+            padding-left: 1rem; /* Tailwind px-4 */
+            padding-right: 1rem;
+        }
+        .main-footer nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0 0 0; /* Tailwind mt-4 */
+            gap: 1rem; /* Tailwind space-x-4 */
+        }
+        .main-footer nav a {
+            color: #9ca3af; /* Tailwind gray-400 */
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .main-footer nav a:hover {
+            color: white;
+        }
+        .social-links {
+            margin-top: 1.5rem; /* Tailwind mt-6 */
+            font-size: 1.5rem; /* Tailwind text-2xl */
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem; /* Tailwind space-x-6 */
+        }
+        .social-links a {
+            color: white;
+            transition: color 0.3s ease;
+        }
+        .social-links a:hover {
+            color: var(--secondary-red); /* Secondary red on hover for social icons */
+        }
+
+        /* Active sidebar link based on JS, using these classes */
+        .sidebar-link.active {
+            background-color: var(--primary-red);
+            color: white;
+            transform: translateX(4px);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+        }
+        .sidebar-link.active .sidebar-icon {
+            color: white;
+        }
+
+    </style>
+</head>
+<body class="flex flex-col min-h-screen text-gray-800 antialiased">
+
+    <header class="main-header">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-start md:items-center">
+            <div class="logo mb-4 md:mb-0">
+                <a href="home.php">Sair Karo</a>
+            </div>
+            <nav aria-label="Main Navigation">
+                <ul>
+                    <li><a href="home.php">Home</a></li>
+                    <li><a href="contact.php">Contact Us</a></li>
+                    <li><a href="/privacy_policy.html" aria-current="page">Privacy Policy</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <a href="#main-content" class="skip-to-content-link">Skip to main content</a>
+
+    <div class="privacy-policy-wrapper">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>Policy Sections</h2>
+                <button class="sidebar-toggle hidden md:block" id="sidebar-toggle" aria-expanded="false" aria-controls="sidebar-nav">
+                    <i class="fas fa-bars"></i>
+                    <i class="fas fa-times"></i>
+                    <span class="sr-only">Toggle navigation</span>
+                </button>
+            </div>
+            <nav id="sidebar-nav" aria-label="Policy Sections">
+                <ul>
+                    <li>
+                        <a href="#introduction" class="sidebar-link">
+                            <i class="fas fa-plane sidebar-icon" aria-hidden="true"></i> Introduction
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#data-collection" class="sidebar-link">
+                            <i class="fas fa-id-card sidebar-icon" aria-hidden="true"></i> Information We Collect
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#how-we-use" class="sidebar-link">
+                            <i class="fas fa-ticket-alt sidebar-icon" aria-hidden="true"></i> How We Use Your Information
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#data-sharing" class="sidebar-link">
+                            <i class="fas fa-handshake sidebar-icon" aria-hidden="true"></i> Sharing Your Information
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#data-security" class="sidebar-link">
+                            <i class="fas fa-shield-alt sidebar-icon" aria-hidden="true"></i> Data Security
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#your-rights" class="sidebar-link">
+                            <i class="fas fa-user-check sidebar-icon" aria-hidden="true"></i> Your Data Protection Rights
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#third-party-links" class="sidebar-link">
+                            <i class="fas fa-map-marked-alt sidebar-icon" aria-hidden="true"></i> Third-Party Links
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#children-privacy" class="sidebar-link">
+                            <i class="fas fa-child sidebar-icon" aria-hidden="true"></i> Children's Privacy
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#policy-changes" class="sidebar-link">
+                            <i class="fas fa-redo-alt sidebar-icon" aria-hidden="true"></i> Changes to This Policy
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#contact-us" class="sidebar-link">
+                            <i class="fas fa-envelope sidebar-icon" aria-hidden="true"></i> Contact Us
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="content" id="main-content">
+            <h1 class="policy-heading">Privacy Policy</h1>
+            <p class="last-updated">Last updated: <time datetime="2025-06-23">June 23, 2025</time></p>
+
+            <div class="search-box">
+                <label for="policySearch" class="sr-only">Search Privacy Policy</label>
+                <input type="text" id="policySearch" placeholder="Search policy..." aria-label="Search Privacy Policy">
+                <i class="fas fa-search search-icon" aria-hidden="true"></i>
+            </div>
+
+            <div id="policyContent">
+                <section id="introduction" class="policy-section" aria-labelledby="introduction-title">
+                    <h2 class="section-title" id="introduction-title">
+                        <i class="fas fa-plane section-icon" aria-hidden="true"></i> Introduction
+                    </h2>
+                    <div class="section-content">
+                        <p>Welcome to Sair Karo! Your privacy is incredibly important to us. This Privacy Policy details how we collect, use, process, and disclose your information when you use our website or services to plan and book your travel experiences. By using our website, you agree to the collection and use of information in accordance with this policy.</p>
+                        <p>We are committed to protecting your personal data and ensuring a safe and enjoyable journey, both online and offline.</p>
+                    </div>
+                </section>
+
+                <section id="data-collection" class="policy-section" aria-labelledby="data-collection-title">
+                    <h2 class="section-title" id="data-collection-title">
+                        <i class="fas fa-id-card section-icon" aria-hidden="true"></i> Information We Collect
+                    </h2>
+                    <div class="section-content">
+                        <p>We collect various types of information to provide and improve our travel booking services to you.</p>
+                        <h3>1. Personal Data:</h3>
+                        <p>This includes information that can be used to identify you directly or indirectly, crucial for booking and managing your trips:</p>
+                        <ul>
+                            <li><strong>Contact & Identity Information:</strong> Name, email address, phone number, physical address, date of birth, gender.</li>
+                            <li><strong>Travel Document Details:</strong> Passport number, visa information, frequent flyer numbers (only if you provide them).</li>
+                            <li><strong>Booking & Reservation Data:</strong> Travel dates, destinations, flight and hotel preferences, special requests (e.g., dietary needs, accessibility).</li>
+                            <li><strong>Payment Information:</strong> Credit/debit card details (processed securely by third-party payment gateways; we do not store full card numbers), billing address.</li>
+                            <li><strong>Account Information:</strong> Username, password (hashed), profile preferences, booking history.</li>
+                        </ul>
+                        <h3>2. Usage Data:</h3>
+                        <p>Information automatically collected about your access and use of our services to understand trends and improve user experience:</p>
+                        <ul>
+                            <li>IP address, browser type and version, operating system.</li>
+                            <li>Pages visited on our site, time spent on those pages, referral sources.</li>
+                            <li>Device identifiers (e.g., mobile device IDs), language preferences.</li>
+                            <li>Search queries for destinations, flight routes, or hotels.</li>
+                        </ul>
+                        <h3>3. Cookies and Tracking Technologies:</h3>
+                        <p>We use cookies and similar technologies to enhance your Browse and booking experience, track activity, and gather information. This helps us remember your preferences and show you relevant travel offers.</p>
+                        <ul>
+                            <li><strong>Strictly Necessary Cookies:</strong> Essential for website functionality (e.g., remembering items in your travel cart).</li>
+                            <li><strong>Performance Cookies:</strong> Collect anonymous data on how users interact with the website to improve its performance (e.g., Google Analytics).</li>
+                            <li><strong>Functional Cookies:</strong> Remember your choices (e.g., preferred currency, last searched destination).</li>
+                            <li><strong>Targeting/Advertising Cookies:</strong> Used to deliver travel-related advertisements that are more relevant to you and your interests.</li>
+                        </ul>
+                        <p>You can configure your browser to refuse all cookies or to indicate when a cookie is being sent. However, if you do not accept cookies, some parts of our Service related to personalized recommendations or streamlined booking might not function optimally.</p>
+                    </div>
+                </section>
+
+                <section id="how-we-use" class="policy-section" aria-labelledby="how-we-use-title">
+                    <h2 class="section-title" id="how-we-use-title">
+                        <i class="fas fa-ticket-alt section-icon" aria-hidden="true"></i> How We Use Your Information
+                    </h2>
+                    <div class="section-content">
+                        <p>We use the collected information for various purposes to facilitate your travel bookings and improve your overall experience:</p>
+                        <ul>
+                            <li>To process and confirm your flight, hotel, and other travel bookings.</li>
+                            <li>To manage your account and provide customer support related to your travel plans.</li>
+                            <li>To personalize your travel experience, offering tailored recommendations for destinations, flights, or hotels based on your past searches and bookings.</li>
+                            <li>To send you important travel updates, booking confirmations, itineraries, and alerts (e.g., flight changes).</li>
+                            <li>To improve, optimize, and expand our website and services based on user behavior and feedback.</li>
+                            <li>To send you promotional offers, newsletters, and information about new destinations or travel deals that may interest you (you can opt-out at any time).</li>
+                            <li>To detect, prevent, and address fraud or other illicit activities.</li>
+                            <li>To comply with legal obligations and resolve disputes.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="data-sharing" class="policy-section" aria-labelledby="data-sharing-title">
+                    <h2 class="section-title" id="data-sharing-title">
+                        <i class="fas fa-handshake section-icon" aria-hidden="true"></i> Sharing Your Information
+                    </h2>
+                    <div class="section-content">
+                        <p>To provide our comprehensive travel services, we may need to share your personal information with specific third parties:</p>
+                        <ul>
+                            <li><strong>Travel Service Providers:</strong> We share necessary information with airlines, hotels, car rental companies, tour operators, and other travel-related service providers to fulfill your bookings. This includes your name, passport details (if required), travel dates, and special requests.</li>
+                            <li><strong>Payment Processors:</strong> Your payment information is shared with secure third-party payment gateways to process transactions.</li>
+                            <li><strong>Analytics & Marketing Partners:</strong> We may share aggregated or anonymized data with analytics providers (like Google Analytics) to understand website usage and with marketing partners to deliver relevant advertisements.</li>
+                            <li><strong>Law Enforcement & Legal Compliance:</strong> We may disclose your information if required by law, subpoena, or if we believe it's necessary to protect our rights, property, or safety, or the safety of our users or the public.</li>
+                            <li><strong>Business Transfers:</strong> In the event of a merger, acquisition, or sale of assets, your personal information may be transferred to the acquiring entity.</li>
+                            <li><strong>With Your Consent:</strong> We may share your information for any other purpose with your explicit consent.</li>
+                        </ul>
+                        <p>We only share the minimum necessary information required to perform specific functions and always strive to ensure these third parties adhere to strict data protection standards.</p>
+                    </div>
+                </section>
+
+                <section id="data-security" class="policy-section" aria-labelledby="data-security-title">
+                    <h2 class="section-title" id="data-security-title">
+                        <i class="fas fa-shield-alt section-icon" aria-hidden="true"></i> Data Security
+                    </h2>
+                    <div class="section-content">
+                        <p>The security of your personal data is a top priority for us. We implement robust technical and organizational measures to protect your information from unauthorized access, use, alteration, and disclosure. These measures include data encryption, firewalls, and secure server environments.</p>
+                        <p>However, please be aware that no method of transmission over the Internet or method of electronic storage is 100% secure. While we strive to protect your personal data, we cannot guarantee its absolute security. We encourage you to use strong, unique passwords for your account and to be cautious about sharing personal information online.</p>
+                    </div>
+                </section>
+
+                <section id="your-rights" class="policy-section" aria-labelledby="your-rights-title">
+                    <h2 class="section-title" id="your-rights-title">
+                        <i class="fas fa-user-check section-icon" aria-hidden="true"></i> Your Data Protection Rights
+                    </h2>
+                    <div class="section-content">
+                        <p>Depending on your jurisdiction (e.g., GDPR, CCPA), you may have the following rights regarding your personal data:</p>
+                        <ul>
+                            <li><strong>The Right to Access:</strong> You can request a copy of the personal data we hold about you.</li>
+                            <li><strong>The Right to Rectification:</strong> You can request that we correct any inaccurate or incomplete personal data.</li>
+                            <li><strong>The Right to Erasure ("Right to be Forgotten"):</strong> You can request that we delete your personal data under certain conditions.</li>
+                            <li><strong>The Right to Restrict Processing:</strong> You can request that we limit the way we use your personal data under certain conditions.</li>
+                            <li><strong>The Right to Object to Processing:</strong> You can object to our processing of your personal data under certain conditions.</li>
+                            <li><strong>The Right to Data Portability:</strong> You can request that we transfer your collected data to another organization, or directly to you, under certain conditions.</li>
+                            <li><strong>The Right to Withdraw Consent:</strong> If we rely on your consent to process your data, you have the right to withdraw it at any time.</li>
+                        </ul>
+                        <p>To exercise any of these rights, please contact us at <a href="mailto:privacy@saikaro.com">privacy@saikaro.com</a>. We will respond to your request in accordance with applicable laws.</p>
+                    </div>
+                </section>
+
+                <section id="third-party-links" class="policy-section" aria-labelledby="third-party-links-title">
+                    <h2 class="section-title" id="third-party-links-title">
+                        <i class="fas fa-map-marked-alt section-icon" aria-hidden="true"></i> Third-Party Links
+                    </h2>
+                    <div class="section-content">
+                        <p>Our website may contain links to other websites that are not operated by us (e.g., airline sites, hotel portals, tourist attractions). If you click on a third-party link, you will be directed to that third party's site. We strongly advise you to review the Privacy Policy of every site you visit, as their practices may differ from ours. We have no control over and assume no responsibility for the content, privacy policies, or practices of any third-party sites or services.</p>
+                    </div>
+                </section>
+
+                <section id="children-privacy" class="policy-section" aria-labelledby="children-privacy-title">
+                    <h2 class="section-title" id="children-privacy-title">
+                        <i class="fas fa-child section-icon" aria-hidden="true"></i> Children's Privacy
+                    </h2>
+                    <div class="section-content">
+                        <p>Our services are not intended for individuals under the age of 13 ("Children"). We do not knowingly collect personally identifiable information from anyone under 13. If you are a parent or guardian and become aware that your child has provided us with Personal Data, please contact us. If we discover that we have collected Personal Data from children without verifiable parental consent, we will take steps to remove that information from our servers.</p>
+                    </div>
+                </section>
+
+                <section id="policy-changes" class="policy-section" aria-labelledby="policy-changes-title">
+                    <h2 class="section-title" id="policy-changes-title">
+                        <i class="fas fa-redo-alt section-icon" aria-hidden="true"></i> Changes to This Privacy Policy
+                    </h2>
+                    <div class="section-content">
+                        <p>We may update our Privacy Policy from time to time to reflect changes in our practices or legal requirements. We will notify you of any significant changes by posting the new Privacy Policy on this page and updating the "Last updated" date. We may also notify you via email or a prominent notice on our website prior to the change becoming effective. We advise you to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.</p>
+                    </div>
+                </section>
+
+                <section id="contact-us" class="policy-section" aria-labelledby="contact-us-title">
+                    <h2 class="section-title" id="contact-us-title">
+                        <i class="fas fa-envelope section-icon" aria-hidden="true"></i> Contact Us
+                    </h2>
+                    <div class="section-content">
+                        <p>If you have any questions or concerns about this Privacy Policy or our data practices, please contact us:</p>
+                        <ul>
+                            <li>By email: <a href="mailto:ajay@gmail.com">ajay@gmail.com</a></li>
+                            <li>By visiting our contact page: <a href="contact.php">TravalBooking.com/contact</a></li>
+                            <li>By mail: Sair Karo, 123 Globe Trotter Lane, Adventurville, CA 90210, USA</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+
+            <div class="call-to-action">
+                <p>Ready for your next adventure? <a href="/destinations.html">Explore our amazing destinations!</a></p>
+            </div>
+
+            <div class="return-to-top">
+                <a href="#top" class="scroll-to-top" aria-label="Return to top of page">
+                    <i class="fas fa-arrow-circle-up" aria-hidden="true"></i> Return to Top
+                </a>
+            </div>
+        </main>
+    </div>
+
+    <footer class="main-footer">
+        <div class="container mx-auto">
+            <p>&copy; 2025 Sair Karo. All Rights Reserved.</p>
+            <nav aria-label="Footer Navigation">
+                <ul>
+                    <li><a href="/terms-of-service.html">Terms of Service</a></li>
+                    <li><a href="/privacy_policy.html">Privacy Policy</a></li>
+                    <li><a href="/faq.html">FAQ</a></li>
+                </ul>
+            </nav>
+            <div class="social-links">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const sidebarToggle = document.getElementById('sidebar-toggle');
+            const sidebarNav = document.getElementById('sidebar-nav');
+            const sidebarLinks = document.querySelectorAll('.sidebar-link');
+            const policySections = document.querySelectorAll('.policy-section');
+            const policySearchInput = document.getElementById('policySearch');
+            let originalContent = {}; // To store original HTML for search reset
+
+            // Store original content of each section for highlighting/reset
+            policySections.forEach(section => {
+                originalContent[section.id] = section.querySelector('.section-content').innerHTML;
+            });
+
+            // --- Mobile Sidebar Toggle ---
+            if (sidebarToggle && sidebarNav) {
+                sidebarToggle.addEventListener('click', function() {
+                    const isExpanded = this.getAttribute('aria-expanded') === 'true';
+                    this.setAttribute('aria-expanded', !isExpanded);
+                    sidebarNav.classList.toggle('open'); // This will control max-height
+                    this.classList.toggle('active'); // Toggle class for icon change
+                    if (sidebarNav.classList.contains('open')) {
+                        sidebarNav.style.maxHeight = sidebarNav.scrollHeight + "px";
+                    } else {
+                        sidebarNav.style.maxHeight = "0";
+                    }
+                });
+            }
+
+            // --- Smooth Scrolling & Active Link Highlighting ---
+            sidebarLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault(); // Prevent default jump
+
+                    const targetId = this.getAttribute('href');
+                    const targetSection = document.querySelector(targetId);
+
+                    if (targetSection) {
+                        // Scroll smoothly to the target section
+                        targetSection.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start' // Scroll to the top of the section
+                        });
+
+                        // Update active class immediately for visual feedback
+                        sidebarLinks.forEach(innerLink => {
+                            innerLink.classList.remove('active');
+                        });
+                        this.classList.add('active');
+
+
+                        // Close sidebar on mobile after clicking a link
+                        if (window.innerWidth <= 1023 && sidebarNav.classList.contains('open')) { // 1023px is lg breakpoint
+                            sidebarToggle.click(); // Programmatically click the toggle button
+                        }
+                    }
+                });
+            });
+
+            // Intersection Observer for highlighting sidebar links on scroll
+            const observerOptions = {
+                root: null, // relative to the viewport
+                rootMargin: '0px',
+                threshold: 0.3 // Section is active when 30% visible (adjust as needed)
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const id = entry.target.id;
+                        sidebarLinks.forEach(link => {
+                            link.classList.remove('active'); // Remove active from all
+                            if (link.getAttribute('href') === `#${id}`) {
+                                link.classList.add('active'); // Add active to the current section's link
+                            }
+                        });
+                    }
+                });
+            }, observerOptions);
+
+            // Observe each policy section
+            policySections.forEach(section => {
+                observer.observe(section);
+            });
+
+            // --- Search Functionality ---
+            policySearchInput.addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase().trim();
+
+                policySections.forEach(section => {
+                    const sectionContentElement = section.querySelector('.section-content');
+                    const sectionTitleElement = section.querySelector('.section-title');
+                    const originalSectionContent = originalContent[section.id]; // Get original HTML
+
+                    // Reset content to its original state (remove previous highlights)
+                    sectionContentElement.innerHTML = originalSectionContent;
+
+                    let sectionMatches = false;
+
+                    if (searchTerm === '') {
+                        section.style.display = 'block'; // Show all sections
+                        return; // Exit early if search term is empty
+                    }
+
+                    // Check if section title matches
+                    if (sectionTitleElement.textContent.toLowerCase().includes(searchTerm)) {
+                        sectionMatches = true;
+                    }
+
+                    // Highlight and check if section content matches
+                    const regex = new RegExp(`(${searchTerm})`, 'gi');
+                    const highlightedContent = originalSectionContent.replace(regex, '<span class="highlight">$1</span>'); /* Use custom highlight class */
+
+                    if (highlightedContent !== originalSectionContent) {
+                        sectionContentElement.innerHTML = highlightedContent;
+                        sectionMatches = true;
+                    }
+
+                    // Show or hide the section based on whether it contains the search term
+                    if (sectionMatches) {
+                        section.style.display = 'block';
+                    } else {
+                        section.style.display = 'none';
+                    }
+                });
+            });
+
+            // --- Initial Active Link State on Load ---
+            if (sidebarLinks.length > 0) {
+                if (!window.location.hash) {
+                    sidebarLinks[0].classList.add('active');
+                } else {
+                    const hashLink = document.querySelector(`.sidebar-link[href="${window.location.hash}"]`);
+                    if (hashLink) {
+                        hashLink.classList.add('active');
+                        document.querySelector(window.location.hash).scrollIntoView({
+                            behavior: 'instant',
+                            block: 'start'
+                        });
+                    } else {
+                        sidebarLinks[0].classList.add('active');
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
