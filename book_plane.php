@@ -2,7 +2,7 @@
 include 'include/db.php'; // Ensure this path is correct for your database connection
 session_start();
 
-// Redirect if user not logged in
+
 if (!isset($_SESSION['user_id'])) {
     echo "<script>alert('Please login to book a ticket.'); window.location.href = 'login.php';</script>";
     exit();
