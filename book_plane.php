@@ -1,5 +1,4 @@
 <?php
-// book_plane.php
 include 'include/db.php'; // Ensure this path is correct for your database connection
 session_start();
 
