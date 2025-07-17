@@ -1,6 +1,6 @@
 <?php
 // book_train.php
-include 'include/db.php'; // Ensure this path is correct
+include 'include/db.php';
 session_start();
 
 // Redirect if user not logged in
