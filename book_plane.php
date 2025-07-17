@@ -1,5 +1,5 @@
 <?php
-include 'include/db.php'; // Ensure this path is correct for your database connection
+include 'include/db.php';
 session_start();
 
 
